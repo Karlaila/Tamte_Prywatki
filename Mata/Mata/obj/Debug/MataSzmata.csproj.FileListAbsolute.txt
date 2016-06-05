@@ -1,0 +1,22 @@
+D:\Studia\Mgr 3\Weronika\Mata\MataSzmata\MataSzmata\bin\Debug\MataSzmata.exe.config
+D:\Studia\Mgr 3\Weronika\Mata\MataSzmata\MataSzmata\bin\Debug\MataSzmata.exe
+D:\Studia\Mgr 3\Weronika\Mata\MataSzmata\MataSzmata\bin\Debug\MataSzmata.pdb
+D:\Studia\Mgr 3\Weronika\Mata\MataSzmata\MataSzmata\bin\Debug\LibUsbDotNet.dll
+D:\Studia\Mgr 3\Weronika\Mata\MataSzmata\MataSzmata\bin\Debug\LibUsbDotNet.xml
+D:\Studia\Mgr 3\Weronika\Mata\MataSzmata\MataSzmata\obj\Debug\MataSzmata.csprojResolveAssemblyReference.cache
+D:\Studia\Mgr 3\Weronika\Mata\MataSzmata\MataSzmata\obj\Debug\MataSzmata.Form1.resources
+D:\Studia\Mgr 3\Weronika\Mata\MataSzmata\MataSzmata\obj\Debug\MataSzmata.Properties.Resources.resources
+D:\Studia\Mgr 3\Weronika\Mata\MataSzmata\MataSzmata\obj\Debug\MataSzmata.csproj.GenerateResource.Cache
+D:\Studia\Mgr 3\Weronika\Mata\MataSzmata\MataSzmata\obj\Debug\MataSzmata.exe
+D:\Studia\Mgr 3\Weronika\Mata\MataSzmata\MataSzmata\obj\Debug\MataSzmata.pdb
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\MataSzmata\MataSzmata\bin\Debug\MataSzmata.exe.config
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\MataSzmata\MataSzmata\obj\Debug\MataSzmata.exe
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\MataSzmata\MataSzmata\obj\Debug\MataSzmata.pdb
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\MataSzmata\MataSzmata\bin\Debug\MataSzmata.exe
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\MataSzmata\MataSzmata\bin\Debug\MataSzmata.pdb
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\MataSzmata\MataSzmata\bin\Debug\LibUsbDotNet.dll
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\MataSzmata\MataSzmata\bin\Debug\LibUsbDotNet.xml
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\MataSzmata\MataSzmata\obj\Debug\MataSzmata.csprojResolveAssemblyReference.cache
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\MataSzmata\MataSzmata\obj\Debug\MataSzmata.Form1.resources
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\MataSzmata\MataSzmata\obj\Debug\MataSzmata.Properties.Resources.resources
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\MataSzmata\MataSzmata\obj\Debug\MataSzmata.csproj.GenerateResource.Cache
