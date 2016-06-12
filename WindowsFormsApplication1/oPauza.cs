@@ -20,7 +20,9 @@ namespace WindowsFormsApplication1
         private void bPowrotKurs_Click(object sender, EventArgs e)
         {
             status.kurs.uruchom();
+            status.reader.start();
             this.Hide();
+            
         }
 
         private void oPauza_FormClosing(object sender, FormClosingEventArgs e)

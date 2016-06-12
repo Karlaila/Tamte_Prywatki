@@ -33,5 +33,6 @@ namespace WindowsFormsApplication1
         public static oWyniki wyniki;
         public static oPauza pauza;
         public static oPomoc pomoc;
+        public static UsbReader reader;
     }
 }

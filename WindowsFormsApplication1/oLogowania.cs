@@ -50,6 +50,7 @@ namespace WindowsFormsApplication1
             status.wyniki = new oWyniki();
             status.pauza = new oPauza();
             status.pomoc = new oPomoc();
+            status.reader = new UsbReader(status.kurs);
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

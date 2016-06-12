@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,6 +15,9 @@ namespace WindowsFormsApplication1
     {
         private WMPLib.IWMPControls3 kontrCale;
         private WMPLib.IWMPControls3 kontrNogi;
+        UsbReader reader = null;
+        Thread readerThread = null;
+
         public oKurs()
         {
             InitializeComponent();
@@ -36,6 +40,8 @@ namespace WindowsFormsApplication1
             {
                 kontrNogi.pause();
             }
+
+            
         }
 
         public void uruchom()
@@ -75,6 +81,7 @@ namespace WindowsFormsApplication1
             pauza();
             // włączanie okna pauzy
             status.pauza.Show();
+            status.reader.stop();
         }
 
         private void bPomoc_Click(object sender, EventArgs e)
@@ -87,6 +94,7 @@ namespace WindowsFormsApplication1
         private void wyjdz(object sender, FormClosingEventArgs e)
         {
             pauza();
+            status.reader.stop();
             string caption = "Wyjście z kursu.";
             MessageBoxButtons button = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show("Czy na pewno wyjść z aplikacji?", caption, button, MessageBoxIcon.Question);
@@ -104,6 +112,21 @@ namespace WindowsFormsApplication1
         private void oKurs_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void setText(string msg)
+        {
+            if (InvokeRequired)
+            {
+                this.Invoke(new Action<string>(setText), new object[] { msg });
+                return;
+            }
+            label1.Text = msg;
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            status.reader.start();
         }
 
     }
