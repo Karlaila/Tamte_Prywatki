@@ -33,5 +33,11 @@ namespace WindowsFormsApplication1
             }
         }
 
+        // Do zrobienia zapisywanie danych w pliku
+
+        // Do zrobienia odczytywanie danej z pliku
+
+        // Stąd połączenie z Pythonem? Wcześniej trzeba zamknąć połączenie z plikiem
+
     }
 }

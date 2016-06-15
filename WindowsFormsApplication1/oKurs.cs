@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1
 
         UsbReader reader = null;
         Thread readerThread = null;
-        // Gdize jest enum?
+        //private enum pMata = status.buttonReader.PadButton
         // mata[i] = true -> przycisk i jest naciśnięty; mata[i] = 0 -> nie jest. 11? WYPEŁNIENIE strzałki
         private bool[] mata = { false, false, false, false, false, false, false, false, false, false, false };
         // strzalka[i] = true -> przycisk i ma być naciśnięty; strzalka[i] = false -> nie ma. 11? BRZEGI strzałki
@@ -89,10 +89,10 @@ namespace WindowsFormsApplication1
         {
             switch (e.newState)
             {
-                case (int)WMPLib.WMPPlayState.wmppsPlaying:
+                /*case (int)WMPLib.WMPPlayState.wmppsPlaying:
                     if (czytaniec && timer1.Enabled == false)
-                        timer1.Start();
-                    break;
+                        
+                    break;*/
                 case 8: //media ended
                     if (!czytaniec)
                     {
@@ -152,6 +152,7 @@ namespace WindowsFormsApplication1
         private void wyjdz(object sender, FormClosingEventArgs e)
         {
             pauza();
+            // to nie działa z jakiegoś powodu :( 
             status.reader.stop();
             string caption = "Wyjście z kursu.";
             MessageBoxButtons button = MessageBoxButtons.YesNo;
@@ -175,6 +176,8 @@ namespace WindowsFormsApplication1
         private void startButton_Click(object sender, EventArgs e)
         {
             status.reader.start();
+            timer1.Start();
+            kontrCale.play();
         }
 
         #endregion
