@@ -16,7 +16,6 @@ namespace WindowsFormsApplication1
         private bool wybczynowy = false; //0 - wybierz, 1 - nowy
         private int lUzytk = 0;
         private List<string> Uzytk;
-        //private WMPLib.IWMPControls3 kontr;
 
         public oLogowania()
         {
@@ -39,7 +38,7 @@ namespace WindowsFormsApplication1
             {
                 File.Create(status.pUzytk);
             }
-            wmpPlayer.URL = "filmy/wLogowanie.mp4";
+            wmpPlayer.URL = "filmy/wLogowanie.avi";
             wmpPlayer.Ctlcontrols.play();
             cBwybierz.Enabled = false;
             tBnazwa.Enabled = false;
@@ -50,22 +49,18 @@ namespace WindowsFormsApplication1
             status.wyniki = new oWyniki();
             status.pauza = new oPauza();
             status.pomoc = new oPomoc();
+            status.ramka = new ramka();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            //rBnowe.Checked = false;
-            //rBwybierz.Checked = true;
             cBwybierz.Enabled = true;
             tBnazwa.Enabled = false;
             wybczynowy = false;
-            wmpPlayer.Ctlcontrols.pause();
         }
 
         private void rBnowe_CheckedChanged(object sender, EventArgs e)
         {
-            //rBnowe.Checked = true;
-            //rBwybierz.Checked = false;
             cBwybierz.Enabled = false;
             tBnazwa.Enabled = true;
             wybczynowy = true;
@@ -125,13 +120,10 @@ namespace WindowsFormsApplication1
             if (czyOk)
             {
                 status.nUzytk = nazwa;
-                //oMenu omenu = new oMenu();
-                /*if (kontr.get_isAvailable("stop"))
-                {
-                    kontr.stop();
-                }*/
+                wmpPlayer.Ctlcontrols.stop();
                 this.Hide();
                 status.menu.Show();
+                status.menu.film();
             }
         }
 

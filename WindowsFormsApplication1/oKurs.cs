@@ -14,14 +14,35 @@ namespace WindowsFormsApplication1
     {
         private WMPLib.IWMPControls3 kontrCale;
         private WMPLib.IWMPControls3 kontrNogi;
+        private bool czytaniec = false;
+        private int i = 0;
         public oKurs()
         {
             InitializeComponent();
-            // wideo w zależności od poziomu!
-            //vNogi.URL = "filmy/wlogowanie.mp4";
-            //vCale.URL = "filmy/wlogowanie.mp4";
+            //vCale.uiMode = "none";
+            vNogi.uiMode = "none";
+            vCale.settings.autoStart = false;
+        }
+
+        public void film()
+        {
+            int p = status.poziom;
+
+            vCale.URL = status.zFilmu1[p];
+            vNogi.URL = status.zFilmu1[p];
+
+            vNogi.settings.volume = 0;
+
             kontrCale = (WMPLib.IWMPControls3)vCale.Ctlcontrols;
             kontrNogi = (WMPLib.IWMPControls3)vNogi.Ctlcontrols;
+            //vCale.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(vCale_PlayStateChange);
+        }
+
+        public void stop()
+        {
+            vNogi.Ctlcontrols.stop();
+            vCale.Ctlcontrols.stop();
+            this.Hide();
         }
 
         private void pauza()
@@ -83,6 +104,14 @@ namespace WindowsFormsApplication1
             status.pomoc.Show();
         }
 
+        //rozpoczyna etap tańca
+        private void taniec()
+        {
+            czytaniec = true;
+            vCale.settings.setMode("loop", true);
+            //vCale.Ctlenabled = true;
+        }
+
         //dodać zapisywanie danych?! 
         private void wyjdz(object sender, FormClosingEventArgs e)
         {
@@ -102,6 +131,39 @@ namespace WindowsFormsApplication1
         }
 
         private void oKurs_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vCale_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
+        {
+            switch (e.newState)
+            {
+                case (int)WMPLib.WMPPlayState.wmppsPlaying:
+                    if (czytaniec && timer1.Enabled == false)
+                        timer1.Start();
+                    break;
+                case 8: //media ended
+                    if (!czytaniec)
+                    {
+                        //przechodzimy do nowego video z krokami
+                        vCale.URL = status.zFilmu2[status.poziom];
+                        taniec();
+                    }
+                    break;
+                case 10:
+                    if (vCale.playState == WMPLib.WMPPlayState.wmppsStopped || vCale.playState == WMPLib.WMPPlayState.wmppsPaused)
+                    {
+                        kontrCale.play();
+                    }
+                    break;
+                default:
+                    label1.Text += ("Unknown State: " + e.newState.ToString());
+                    break;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
 
         }

@@ -14,14 +14,13 @@ namespace WindowsFormsApplication1
         public static string pUzytk = "dane/uzytkownicy.txt";
         public static string pDane = "dane/";
         public static string nUzytk = null;
-        //zrób enum Days {Sat, Sun, Mon, Tue, Wed, Thu, Fri};
-        //int x = (int)Days.Sun;
-        //1 - krok podstawowy, 2 - obrót, 3 - układ
-        public static int poziom1 = 0;
-        //1- powtarzanie krok po kroku; 2 - powtarzanie po strzałkach; 3- bez strzałek, 4 - z muzyką
-        public static int poziom2 = 0;
-        //1- wolno, 3 - szybko
-        public static int poziom3 = 0;
+
+        // poziomy
+        // krok podstawowy w prawo: kp, w lewo: kl; obrót po kwadracie w prawo: op, w lewo: ol; poziomy: 1,2,3, m - z muzyką.
+        public enum poziomy {nic, kp1, kp2, kp3, kpm, kl1, kl2, kl3, klm, op1, op2, op3, opm, ol1, ol2, ol3, olm};
+        public static int poziom;
+        public static int nrPodejscia;
+
         // plik użytkownika
         // dane
 
@@ -33,5 +32,15 @@ namespace WindowsFormsApplication1
         public static oWyniki wyniki;
         public static oPauza pauza;
         public static oPomoc pomoc;
+        public static ramka ramka;
+
+        //teksty
+        public static String[] oPoziomu = new String[17]; // dodać opisy!
+
+
+        //filmy - źródła
+        public static String[] zFilmu1 = { "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi" }; // dodać filmy!
+        public static String[] zFilmu2 = { "filmy/wP1start.avi", "filmy/wP1krokipierwsze.avi", "filmy/wP1kroki.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi" }; // dodać filmy!
+        
     }
 }

@@ -86,6 +86,7 @@
     <Compile Include="oWyniki.Designer.cs">
       <DependentUpon>oWyniki.cs</DependentUpon>
     </Compile>
+    <Compile Include="ramka.cs" />
     <Compile Include="status.cs" />
     <Compile Include="oLogowania.cs">
       <SubType>Form</SubType>

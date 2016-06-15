@@ -45,6 +45,8 @@
             this.bPauza = new System.Windows.Forms.Button();
             this.bPomoc = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.vCale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vNogi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbG)).BeginInit();
@@ -61,11 +63,12 @@
             // vCale
             // 
             this.vCale.Enabled = true;
-            this.vCale.Location = new System.Drawing.Point(374, 23);
+            this.vCale.Location = new System.Drawing.Point(357, 23);
             this.vCale.Name = "vCale";
             this.vCale.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("vCale.OcxState")));
-            this.vCale.Size = new System.Drawing.Size(155, 183);
+            this.vCale.Size = new System.Drawing.Size(172, 254);
             this.vCale.TabIndex = 0;
+            this.vCale.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.vCale_PlayStateChange);
             // 
             // vNogi
             // 
@@ -178,11 +181,35 @@
             this.bPomoc.UseVisualStyleBackColor = true;
             this.bPomoc.Click += new System.EventHandler(this.bPomoc_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(357, 284);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(262, 151);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "label2";
+            // 
             // oKurs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 326);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bPomoc);
             this.Controls.Add(this.bPauza);
             this.Controls.Add(this.bPowrot);
@@ -213,6 +240,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbDL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbL)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -233,5 +261,7 @@
         private System.Windows.Forms.Button bPauza;
         private System.Windows.Forms.Button bPomoc;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

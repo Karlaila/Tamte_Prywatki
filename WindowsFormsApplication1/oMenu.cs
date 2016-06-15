@@ -16,30 +16,42 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
             // ustaw nazwę pierwszego buttona w zależności od tego czy nowy czy stary użytkownik
-            // axWindowsMediaPlayer1 = "filmy/wMenu.mp4"
+            //axWindowsMediaPlayer1.URL = "filmy/wMenu.avi";
+            //axWindowsMediaPlayer1.Ctlcontrols.pause();
+        }
+
+        public void film(){
+            axWindowsMediaPlayer1.URL = "filmy/wMenu.avi";
         }
 
         private void bKurs_Click(object sender, EventArgs e)
         {
             status.kurs.Show();
+            status.kurs.film();
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
             this.Hide();
         }
 
         private void bWybor_Click(object sender, EventArgs e)
         {
             status.wybor.Show();
+            status.wybor.film();
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
             this.Hide();
         }
 
         private void bInfo_Click(object sender, EventArgs e)
         {
             status.info.Show();
+            status.info.film();
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
             this.Hide();
         }
 
         private void bWyniki_Click(object sender, EventArgs e)
         {
             status.wyniki.Show();
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
             this.Hide();
         }
 
