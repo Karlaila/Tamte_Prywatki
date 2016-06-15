@@ -17,14 +17,22 @@ namespace WindowsFormsApplication1
         private WMPLib.IWMPControls3 kontrNogi;
         private bool czytaniec = false;
         private int i = 0;
+        private int licznik = 0;
 
         UsbReader reader = null;
         Thread readerThread = null;
         //private enum pMata = status.buttonReader.PadButton
-        // mata[i] = true -> przycisk i jest naciśnięty; mata[i] = 0 -> nie jest. 11? WYPEŁNIENIE strzałki
-        private bool[] mata = { false, false, false, false, false, false, false, false, false, false, false };
-        // strzalka[i] = true -> przycisk i ma być naciśnięty; strzalka[i] = false -> nie ma. 11? BRZEGI strzałki
-        private bool[] strzalka = { false, false, false, false, false, false, false, false, false, false, false };
+        // mata[i] = true -> przycisk i jest naciśnięty; mata[i] = 0 -> nie jest. 14? WYPEŁNIENIE strzałki
+        private bool[] mata = { false, false, false, false, false, false, false, false, false, false, false, false, false, false };
+        // strzalka[i] = true -> przycisk i ma być naciśnięty; strzalka[i] = false -> nie ma. 14? BRZEGI strzałki
+        private bool[] strzalka = { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
+        private int[] tKroki;
+        private int[] sKroki;
+
+        private void zerujStrzalke(){
+            for(i = 0; i<(strzalka).Length; i++)
+                strzalka[i] = false;
+        }
 
         public oKurs()
         {
@@ -46,6 +54,7 @@ namespace WindowsFormsApplication1
 
             kontrCale = (WMPLib.IWMPControls3)vCale.Ctlcontrols;
             kontrNogi = (WMPLib.IWMPControls3)vNogi.Ctlcontrols;
+            kontrCale.play();
             //vCale.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(vCale_PlayStateChange);
         }
 
@@ -98,15 +107,16 @@ namespace WindowsFormsApplication1
                     {
                         //przechodzimy do nowego video z krokami
                         vCale.URL = status.zFilmu2[status.poziom];
+                        label1.Text = vCale.URL;
                         taniec();
                     }
                     break;
-                case 10:
+                /*case 10:
                     if (vCale.playState == WMPLib.WMPPlayState.wmppsStopped || vCale.playState == WMPLib.WMPPlayState.wmppsPaused)
                     {
                         kontrCale.play();
                     }
-                    break;
+                    break;*/
                 default:
                     label1.Text += ("Unknown State: " + e.newState.ToString());
                     break;
@@ -175,7 +185,7 @@ namespace WindowsFormsApplication1
 
         private void startButton_Click(object sender, EventArgs e)
         {
-            status.reader.start();
+            //status.reader.start();
             timer1.Start();
             kontrCale.play();
         }
@@ -188,13 +198,58 @@ namespace WindowsFormsApplication1
         {
             czytaniec = true;
             vCale.settings.setMode("loop", true);
-            //vCale.Ctlenabled = true;
+            sKroki = status.sKroki[status.poziom];
+            tKroki = status.tKroki[status.poziom];
+            licznik = 0;
+            // pozycja startowa
+            switch (status.poziom)
+            {
+                case 1:
+                    strzalka[(int)status.pMata.TRIANGLE] = true;
+                    strzalka[(int)status.pMata.DOWN] = true;
+                    break;
+                default:
+                    zerujStrzalke();
+                    break;
+            }
         }
+
+        private int secToTick(int sec)
+        {
+            int ttick = timer1.Interval;
+            return sec * 1000 / ttick;
+        }
+        private int iKroki = 0;
+        bool zmiana = true;
 
         // przebieg gry
         private void timer1_Tick(object sender, EventArgs e)
         {
+            licznik++;
             // sprawdzanie tablicy mata - czy są nowe naciśnięcia? 
+            // jeśli poprawne wciśnięcia - itKroki++
+
+            int prog = secToTick(tKroki[iKroki]);
+            if (licznik < prog && zmiana)
+            {
+                zerujStrzalke();
+                strzalka[sKroki[iKroki]] = true;
+                label3.Text = sKroki[iKroki].ToString();
+                zmiana = false;
+            }
+            else if (licznik >= prog)
+            {
+                //kontrCale.pause();
+                // będzie trzeba dodać drugi licznik, żeby ten na pauzie działał
+                zmiana = true;
+                iKroki++;
+                if (iKroki >= sKroki.Length)
+                {
+                    iKroki = 0;
+                    licznik = 0;
+                }
+            }
+
             // uzupełnianie tablicy strzałki - co ma być naciśnięte?
         }
 

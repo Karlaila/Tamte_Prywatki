@@ -18,8 +18,33 @@ namespace WindowsFormsApplication1
         // poziomy
         // krok podstawowy w prawo: kp, w lewo: kl; obrót po kwadracie w prawo: op, w lewo: ol; poziomy: 1,2,3, m - z muzyką.
         public enum poziomy {nic, kp1, kp2, kp3, kpm, kl1, kl2, kl3, klm, op1, op2, op3, opm, ol1, ol2, ol3, olm};
+        public enum pMata
+        {
+            UP = 6,
+            DOWN = 5,
+            RIGHT = 7,
+            LEFT = 4,
+            X = 10,
+            TRIANGLE = 9,
+            SQUARE = 8,
+            CIRCLE = 11,
+            SELECT = 12,
+            START = 13
+        }
         public static int poziom;
         public static int nrPodejscia;
+        public static int[][] tKroki = new int[13][];
+        public static int[][] sKroki = new int[13][];
+
+        public static void init_kroki()
+        {
+            // dla każdego z poziomów czasy nowego kroku.
+            tKroki[1] = new int[]{6, 11, 18, 25, 31, 39};
+
+            // dla każdego z poziomów sekwencje kroków
+            sKroki[1] = new int[] { (int)pMata.RIGHT, (int)pMata.UP, (int)pMata.CIRCLE, (int)pMata.LEFT, (int)pMata.DOWN, (int)pMata.TRIANGLE };
+
+        }
 
         // plik użytkownika
         // dane
@@ -36,6 +61,7 @@ namespace WindowsFormsApplication1
 
         //teksty
         public static String[] oPoziomu = new String[17]; // dodać opisy!
+
 
 
         //filmy - źródła

@@ -48,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.vCale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vNogi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbG)).BeginInit();
@@ -189,11 +190,6 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(357, 284);
-
-            // label1
-            // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(239, 172);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
@@ -208,6 +204,7 @@
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 15;
             this.label2.Text = "label2";
+            // 
             // startButton
             // 
             this.startButton.Location = new System.Drawing.Point(339, 291);
@@ -218,11 +215,21 @@
             this.startButton.UseVisualStyleBackColor = true;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(242, 207);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "label3";
+            // 
             // oKurs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 326);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.label1);
@@ -280,5 +287,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Label label3;
     }
 }
