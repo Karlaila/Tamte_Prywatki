@@ -19,3 +19,28 @@ C:\Users\Karolina\Documents\0studia\sem8\Tamte_Prywatki\WindowsFormsApplication1
 C:\Users\Karolina\Documents\0studia\sem8\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.oPauza.resources
 C:\Users\Karolina\Documents\0studia\sem8\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.oPomoc.resources
 C:\Users\Karolina\Documents\0studia\sem8\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.oWyniki.resources
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\Interop.WMPLib.dll
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\AxInterop.WMPLib.dll
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.ResolveComReference.cache
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\bin\Debug\Interop.WMPLib.dll
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\bin\Debug\AxInterop.WMPLib.dll
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.oInformacje.resources
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.oKurs.resources
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.oLogowania.resources
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.oMenu.resources
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.oPauza.resources
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.oPomoc.resources
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.oWybor.resources
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.oWyniki.resources
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\bin\Debug\LibUsbDotNet.dll
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\bin\Debug\LibUsbDotNet.xml
+C:\Users\Karolina\Documents\0studia\sem8\Tamte_Prywatki\WindowsFormsApplication1\bin\Debug\LibUsbDotNet.dll
+C:\Users\Karolina\Documents\0studia\sem8\Tamte_Prywatki\WindowsFormsApplication1\bin\Debug\LibUsbDotNet.xml

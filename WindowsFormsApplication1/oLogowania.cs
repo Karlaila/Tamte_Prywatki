@@ -49,7 +49,6 @@ namespace WindowsFormsApplication1
             status.wyniki = new oWyniki();
             status.pauza = new oPauza();
             status.pomoc = new oPomoc();
-            status.ramka = new ramka();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -119,7 +118,8 @@ namespace WindowsFormsApplication1
             #endregion
             if (czyOk)
             {
-                status.nUzytk = nazwa;
+                status.nUzytk = nazwa; //RAMKA DOPIERO PO TYM
+                status.ramka = new ramka();
                 wmpPlayer.Ctlcontrols.stop();
                 this.Hide();
                 status.menu.Show();

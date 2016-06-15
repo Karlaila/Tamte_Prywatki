@@ -15,26 +15,21 @@ namespace WindowsFormsApplication1
         public enum typRamki {czas, start, koniec, popr};
         public string lp;
         public string dane;
-        public string pPlik;
+        private string pPlik;
+        private StreamReader file;
 
         public ramka()
         {
+            // nawiązanie połączenia z 
             data = DateTime.Today.ToString("d");
+            pPlik = status.pDane + status.nUzytk;
             try
             {
-                pPlik = status.pDane + status.nUzytk;
-                StreamReader file = new StreamReader(status.pUzytk, true);
-                while ((U = file.ReadLine()) != null)
-                {
-                    Uzytk.Add(U);
-                    lUzytk++;
-                    cBwybierz.Items.Add(U);
-                }
-                file.Close();*/
+                file = new StreamReader(pPlik, true);
             }
             catch (Exception ex)
             {
-                //File.Create(status.pUzytk);
+                File.Create(pPlik);
             }
         }
 

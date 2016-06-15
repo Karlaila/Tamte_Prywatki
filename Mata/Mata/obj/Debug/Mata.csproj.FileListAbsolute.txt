@@ -22,3 +22,6 @@ C:\Users\Weronika\Documents\Visual Studio 2015\Projects\Mata\Mata\obj\Debug\Mata
 C:\Users\Weronika\Documents\Visual Studio 2015\Projects\Mata\Mata\obj\Debug\Mata.Form1.resources
 C:\Users\Weronika\Documents\Visual Studio 2015\Projects\Mata\Mata\obj\Debug\MataSzmata.Properties.Resources.resources
 C:\Users\Weronika\Documents\Visual Studio 2015\Projects\Mata\Mata\obj\Debug\Mata.csproj.GenerateResource.Cache
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\Mata\Mata\bin\Debug\MataSzmata.exe.config
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\Mata\Mata\obj\Debug\MataSzmata.exe
+D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\Mata\Mata\obj\Debug\MataSzmata.pdb
