@@ -20,6 +20,11 @@ namespace WindowsFormsApplication1
 
         UsbReader reader = null;
         Thread readerThread = null;
+        // Gdize jest enum?
+        // mata[i] = true -> przycisk i jest naciśnięty; mata[i] = 0 -> nie jest. 11? WYPEŁNIENIE strzałki
+        private bool[] mata = { false, false, false, false, false, false, false, false, false, false, false };
+        // strzalka[i] = true -> przycisk i ma być naciśnięty; strzalka[i] = false -> nie ma. 11? BRZEGI strzałki
+        private bool[] strzalka = { false, false, false, false, false, false, false, false, false, false, false };
 
         public oKurs()
         {
@@ -29,6 +34,7 @@ namespace WindowsFormsApplication1
             vCale.settings.autoStart = false;
         }
 
+        #region obsługa filmu
         public void film()
         {
             int p = status.poziom;
@@ -79,6 +85,37 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void vCale_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
+        {
+            switch (e.newState)
+            {
+                case (int)WMPLib.WMPPlayState.wmppsPlaying:
+                    if (czytaniec && timer1.Enabled == false)
+                        timer1.Start();
+                    break;
+                case 8: //media ended
+                    if (!czytaniec)
+                    {
+                        //przechodzimy do nowego video z krokami
+                        vCale.URL = status.zFilmu2[status.poziom];
+                        taniec();
+                    }
+                    break;
+                case 10:
+                    if (vCale.playState == WMPLib.WMPPlayState.wmppsStopped || vCale.playState == WMPLib.WMPPlayState.wmppsPaused)
+                    {
+                        kontrCale.play();
+                    }
+                    break;
+                default:
+                    label1.Text += ("Unknown State: " + e.newState.ToString());
+                    break;
+            }
+        }
+
+        #endregion
+
+        #region obsługa przycisków
         //dodać zapisywanie danych?! 
         private void bPowrot_Click(object sender, EventArgs e)
         {
@@ -111,15 +148,6 @@ namespace WindowsFormsApplication1
             pauza();
             status.pomoc.Show();
         }
-
-        //rozpoczyna etap tańca
-        private void taniec()
-        {
-            czytaniec = true;
-            vCale.settings.setMode("loop", true);
-            //vCale.Ctlenabled = true;
-        }
-
         //dodać zapisywanie danych?! 
         private void wyjdz(object sender, FormClosingEventArgs e)
         {
@@ -144,36 +172,27 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void vCale_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
+        private void startButton_Click(object sender, EventArgs e)
         {
-            switch (e.newState)
-            {
-                case (int)WMPLib.WMPPlayState.wmppsPlaying:
-                    if (czytaniec && timer1.Enabled == false)
-                        timer1.Start();
-                    break;
-                case 8: //media ended
-                    if (!czytaniec)
-                    {
-                        //przechodzimy do nowego video z krokami
-                        vCale.URL = status.zFilmu2[status.poziom];
-                        taniec();
-                    }
-                    break;
-                case 10:
-                    if (vCale.playState == WMPLib.WMPPlayState.wmppsStopped || vCale.playState == WMPLib.WMPPlayState.wmppsPaused)
-                    {
-                        kontrCale.play();
-                    }
-                    break;
-                default:
-                    label1.Text += ("Unknown State: " + e.newState.ToString());
-                    break;
-            }
+            status.reader.start();
         }
 
+        #endregion
+
+        #region gra
+        //rozpoczyna etap tańca
+        private void taniec()
+        {
+            czytaniec = true;
+            vCale.settings.setMode("loop", true);
+            //vCale.Ctlenabled = true;
+        }
+
+        // przebieg gry
         private void timer1_Tick(object sender, EventArgs e)
         {
+            // sprawdzanie tablicy mata - czy są nowe naciśnięcia? 
+            // uzupełnianie tablicy strzałki - co ma być naciśnięte?
         }
 
         public void setText(string msg)
@@ -185,11 +204,8 @@ namespace WindowsFormsApplication1
             }
             label1.Text = msg;
         }
+        #endregion
 
-        private void startButton_Click(object sender, EventArgs e)
-        {
-            status.reader.start();
-        }
 
     }
 }
