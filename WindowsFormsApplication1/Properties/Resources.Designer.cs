@@ -93,6 +93,16 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dol_wcisniete_obwod {
+            get {
+                object obj = ResourceManager.GetObject("dol_wcisniete_obwod", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gora {
             get {
                 object obj = ResourceManager.GetObject("gora", resourceCulture);
@@ -116,6 +126,16 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap gora_wcisniete {
             get {
                 object obj = ResourceManager.GetObject("gora_wcisniete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gora_wcisniete_obwod {
+            get {
+                object obj = ResourceManager.GetObject("gora_wcisniete_obwod", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +173,16 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap k_wcisniete_obwod {
+            get {
+                object obj = ResourceManager.GetObject("k_wcisniete_obwod", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lewo {
             get {
                 object obj = ResourceManager.GetObject("lewo", resourceCulture);
@@ -176,6 +206,16 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap lewo_wcisniete {
             get {
                 object obj = ResourceManager.GetObject("lewo_wcisniete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lewo_wcisniete_obwod {
+            get {
+                object obj = ResourceManager.GetObject("lewo_wcisniete_obwod", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,6 +253,16 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap o_wcisniete_obwod {
+            get {
+                object obj = ResourceManager.GetObject("o_wcisniete_obwod", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap prawo {
             get {
                 object obj = ResourceManager.GetObject("prawo", resourceCulture);
@@ -236,6 +286,16 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap prawo_wcisniete {
             get {
                 object obj = ResourceManager.GetObject("prawo_wcisniete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prawo_wcisniete_obwod {
+            get {
+                object obj = ResourceManager.GetObject("prawo_wcisniete_obwod", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,6 +343,16 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap t_wcisniete_obwod {
+            get {
+                object obj = ResourceManager.GetObject("t_wcisniete_obwod", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap x {
             get {
                 object obj = ResourceManager.GetObject("x", resourceCulture);
@@ -306,6 +376,16 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap x_wcisniete {
             get {
                 object obj = ResourceManager.GetObject("x_wcisniete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap x_wcisniete_obwod {
+            get {
+                object obj = ResourceManager.GetObject("x_wcisniete_obwod", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

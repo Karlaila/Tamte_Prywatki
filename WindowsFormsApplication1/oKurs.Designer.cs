@@ -72,6 +72,7 @@
             this.vCale.TabIndex = 0;
             this.vCale.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.vCale_PlayStateChange);
             this.vCale.KeyDownEvent += new AxWMPLib._WMPOCXEvents_KeyDownEventHandler(this.vCale_KeyDownEvent);
+            this.vCale.KeyUpEvent += new AxWMPLib._WMPOCXEvents_KeyUpEventHandler(this.vCale_KeyUpEvent);
             // 
             // vNogi
             // 
@@ -114,6 +115,7 @@
             // 
             // timer1
             // 
+            this.timer1.Interval = 200;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label1

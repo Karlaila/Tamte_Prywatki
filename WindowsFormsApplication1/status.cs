@@ -35,16 +35,32 @@ namespace WindowsFormsApplication1
         public static int nrPodejscia;
         public static int[][] tKroki = new int[13][];
         public static int[][] sKroki = new int[13][];
+        public static int[] czasyKonca = { 220, 390, 320, 320, 2210, 390, 320, 320, 2210, 390, 320, 320, 2210, 390, 320, 320, 2210 };
 
         public static void init_kroki()
         {
             // dla każdego z poziomów czasy nowego kroku w decysekundach.
-            tKroki[1] = new int[]{60, 110, 180, 250, 310, 390};
-            tKroki[2] = new int[] { 17, 25, 50, 57, 70, 80, 100, 120, 130, 150, 162, 175, 190, 200, 210, 220, 233, 250, 260, 270, 285, 290, 305, 320 };
+            tKroki[1] = new int[]{60, 117, 180, 245, 302, 385};
+            tKroki[2] = new int[] { 20, 35, 50, 67, 77, 90, 110, 122, 140, 150, 165, 179, 190, 204, 215, 225, 238, 251, 260, 270, 286, 296, 308, 320 };
+            tKroki[3] = new int[tKroki[2].Length];
+            tKroki[4] = new int[336];
+            tKroki[4][0] = 900;
+            //zwalnianie + poziom 4
+            for (int i = 0; i < tKroki[2].Length; i++)
+            {
+                tKroki[3][i] = (int)(tKroki[2][i] * 1.1);
+            }
+            for (int i = 1; i < tKroki[4].Length; i++)
+            {
+                tKroki[4][i] = (int)((double)tKroki[4][i - 1] + 684);
+            }
+            for (int i = 0; i < tKroki[4].Length; i++)
+            {
+                tKroki[4][i] = (int)(tKroki[4][i]/100);
+            }
 
-
-            // dla każdego z poziomów sekwencje kroków
-            sKroki[1] = new int[] { (int)pMata.RIGHT, (int)pMata.UP, (int)pMata.CIRCLE, (int)pMata.LEFT, (int)pMata.DOWN, (int)pMata.TRIANGLE };
+                // dla każdego z poziomów sekwencje kroków
+                sKroki[1] = new int[] { (int)pMata.RIGHT, (int)pMata.UP, (int)pMata.CIRCLE, (int)pMata.LEFT, (int)pMata.DOWN, (int)pMata.TRIANGLE };
             sKroki[2] = sKroki[1];
             sKroki[3] = sKroki[1];
             sKroki[4] = sKroki[1];
@@ -70,7 +86,7 @@ namespace WindowsFormsApplication1
 
         //filmy - źródła
         public static String[] zFilmu1 = { "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi" }; // dodać filmy!
-        public static String[] zFilmu2 = { "filmy/wP1start.avi", "filmy/wP1krokipierwsze.avi", "filmy/wP1kroki.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi" }; // dodać filmy!
+        public static String[] zFilmu2 = { "filmy/wP1start.avi", "filmy/wP1krokipierwsze.avi", "filmy/wP1kroki.avi", "filmy/wP1start.avi", "filmy/wP1muza.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi" }; // dodać filmy!
         
         public static UsbReader reader;
     }
