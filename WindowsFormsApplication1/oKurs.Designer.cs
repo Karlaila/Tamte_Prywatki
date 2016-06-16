@@ -39,7 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
-
             this.pbL = new System.Windows.Forms.PictureBox();
             this.pbDL = new System.Windows.Forms.PictureBox();
             this.pbD = new System.Windows.Forms.PictureBox();
@@ -49,7 +48,6 @@
             this.pbGL = new System.Windows.Forms.PictureBox();
             this.pbGP = new System.Windows.Forms.PictureBox();
             this.pbG = new System.Windows.Forms.PictureBox();
-
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.vCale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vNogi)).BeginInit();
@@ -233,6 +231,7 @@
             this.pbG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbG.TabIndex = 2;
             this.pbG.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
