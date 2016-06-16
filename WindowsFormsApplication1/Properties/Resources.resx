@@ -193,4 +193,28 @@
   <data name="x_wcisniete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x_wcisniete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dol_wcisniete_obwod" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dol_wcisniete_obwod.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gora_wcisniete_obwod" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gora_wcisniete_obwod.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k_wcisniete_obwod" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\k_wcisniete_obwod.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lewo_wcisniete_obwod" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lewo_wcisniete_obwod.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="o_wcisniete_obwod" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\o_wcisniete_obwod.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="prawo_wcisniete_obwod" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\prawo_wcisniete_obwod.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="t_wcisniete_obwod" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\t_wcisniete_obwod.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="x_wcisniete_obwod" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x_wcisniete_obwod.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -31,8 +31,8 @@ namespace WindowsFormsApplication1
 
         // tymczasowo do sprawdzenia dzialania strzalek
         private int timeToStrzalka = 0;
-        private bool[] strzalkaWcisnieta = { false, false, false, false, false, false, false, false, false, false };
-        private int[] timeToWygasniecie = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        private bool[] strzalkaWcisnieta = { false, false, false, false, false, false, false, false, false, false, false, false, false, false };
+        private int[] timeToWygasniecie = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0,0,0,0 };
 
         private void zerujStrzalke(){
             strzalka = new bool[] { false, false, false, false, false, false, false, false, false, false, false, false, false, false };
@@ -253,53 +253,99 @@ namespace WindowsFormsApplication1
                 }
             }
             // uzupełnianie tablicy strzałki - co ma być naciśnięte?
-            /*
+      
+           
+            
             //TESTY:
-            //prymitywny kod(w tym momencie zapali Ci sie krzyzyk i strzalka w prawo)
             timeToStrzalka += timer1.Interval;
             for(int i = 0; i < strzalkaWcisnieta.Length; i++)
->>>>>>> 2391df1843aeb119049fbab753b13784362b4160
+
             {
                 if (strzalkaWcisnieta[i])
                 {
                     timeToWygasniecie[i] += timer1.Interval;
                 }
             }
-          
-            if (timeToStrzalka >= 5000)
-            {   //random 9 if int
-                this.pbP.Image = global::WindowsFormsApplication1.Properties.Resources.prawo_obwod;
-                this.pbGL.Image = global::WindowsFormsApplication1.Properties.Resources.x_obwod;
-                timeToStrzalka = 0;
-            }
-            
-            if (strzalkaWcisnieta[2] && timeToWygasniecie[2] >= 500)
-            {
-                this.pbP.Image = global::WindowsFormsApplication1.Properties.Resources.prawo_z;
-                strzalkaWcisnieta[2] = false;
-                timeToWygasniecie[2] = 0;
-                
-            }
-            if (mata[2] == true)
-            {
-                this.pbP.Image = global::WindowsFormsApplication1.Properties.Resources.prawo_wcisniete;
-                strzalkaWcisnieta[2] = true;
-                mata[2] = false;
-            }
-            if (strzalkaWcisnieta[4] && timeToWygasniecie[4] >= 500)
-            {
-                this.pbGL.Image = global::WindowsFormsApplication1.Properties.Resources.x;
-                strzalkaWcisnieta[4] = false;
-                timeToWygasniecie[4] = 0;
 
+            #region wysiwetlanie strzalek do nacisniecia
+            for (i = 0; i < strzalka.Length; i++ ) {
+                if (strzalka[i]==true)
+                {
+                    if (i == 6) this.pbG.Image = global::WindowsFormsApplication1.Properties.Resources.gora_obwod;
+                    if (i == 5) this.pbD.Image = global::WindowsFormsApplication1.Properties.Resources.dol_obwod;
+                    if (i == 7) this.pbP.Image = global::WindowsFormsApplication1.Properties.Resources.prawo_obwod;
+                    if (i == 4) this.pbL.Image = global::WindowsFormsApplication1.Properties.Resources.lewo_obwod;
+                    if (i == 10) this.pbGL.Image = global::WindowsFormsApplication1.Properties.Resources.x_obwod;
+                    if (i == 9) this.pbDL.Image = global::WindowsFormsApplication1.Properties.Resources.t_obwod;
+                    if (i == 8) this.pbDP.Image = global::WindowsFormsApplication1.Properties.Resources.k_obwod;
+                    if (i == 11) this.pbGP.Image = global::WindowsFormsApplication1.Properties.Resources.o_obwod;
+
+                }
             }
-            if (mata[4] == true)
+            #endregion
+
+
+            #region powrot do zwyklych strzalek
+            for (i = 0; i < strzalkaWcisnieta.Length; i++)
             {
-                this.pbGL.Image = global::WindowsFormsApplication1.Properties.Resources.x_wcisniete;
-                strzalkaWcisnieta[4] = true;
-                mata[4] = false;
+                if (strzalkaWcisnieta[i] && timeToWygasniecie[i] >= 500)
+                {
+                    if (i == 6) this.pbG.Image = global::WindowsFormsApplication1.Properties.Resources.gora;
+                    if (i == 5) this.pbD.Image = global::WindowsFormsApplication1.Properties.Resources.dol;
+                    if (i == 7) this.pbP.Image = global::WindowsFormsApplication1.Properties.Resources.prawo_z;
+                    if (i == 4) this.pbL.Image = global::WindowsFormsApplication1.Properties.Resources.lewo;
+                    if (i == 10) this.pbGL.Image = global::WindowsFormsApplication1.Properties.Resources.x;
+                    if (i == 9) this.pbDL.Image = global::WindowsFormsApplication1.Properties.Resources.t;
+                    if (i == 8) this.pbDP.Image = global::WindowsFormsApplication1.Properties.Resources.k;
+                    if (i == 11) this.pbGP.Image = global::WindowsFormsApplication1.Properties.Resources.o;
+                    //this.pbP.Image = global::WindowsFormsApplication1.Properties.Resources.prawo_z;
+                    strzalkaWcisnieta[i] = false;
+                    timeToWygasniecie[i] = 0;
+                }
             }
-            */
+            #endregion
+
+            /*
+             if (strzalkaWcisnieta[4] && timeToWygasniecie[4] >= 500)
+             {
+                 this.pbGL.Image = global::WindowsFormsApplication1.Properties.Resources.x;
+                 strzalkaWcisnieta[4] = false;
+                 timeToWygasniecie[4] = 0;
+
+             }
+             */
+
+
+            #region sprawdzanie tablicy mata
+            for (i = 0; i < mata.Length;  i++) {
+                if (mata[i] == true)
+                {
+                    if (strzalka[i] == true)
+                    {
+                        if (i == 6) this.pbG.Image = global::WindowsFormsApplication1.Properties.Resources.gora_wcisniete_obwod;
+                        if (i == 5) this.pbD.Image = global::WindowsFormsApplication1.Properties.Resources.dol_wcisniete_obwod;
+                        if (i == 7) this.pbP.Image = global::WindowsFormsApplication1.Properties.Resources.prawo_wcisniete_obwod;
+                        if (i == 4) this.pbL.Image = global::WindowsFormsApplication1.Properties.Resources.lewo_wcisniete_obwod;
+                        if (i == 10) this.pbGL.Image = global::WindowsFormsApplication1.Properties.Resources.x_wcisniete_obwod;
+                        if (i == 9) this.pbDL.Image = global::WindowsFormsApplication1.Properties.Resources.t_wcisniete_obwod;
+                        if (i == 8) this.pbDP.Image = global::WindowsFormsApplication1.Properties.Resources.k_wcisniete_obwod;
+                        if (i == 11) this.pbGP.Image = global::WindowsFormsApplication1.Properties.Resources.o_wcisniete_obwod;
+                    }
+                    else {
+                        if (i == 6) this.pbG.Image = global::WindowsFormsApplication1.Properties.Resources.gora_wcisniete;
+                        if (i == 5) this.pbD.Image = global::WindowsFormsApplication1.Properties.Resources.dol_wcisniete;
+                        if (i == 7) this.pbP.Image = global::WindowsFormsApplication1.Properties.Resources.prawo_wcisniete;
+                        if (i == 4) this.pbL.Image = global::WindowsFormsApplication1.Properties.Resources.lewo_wcisniete;
+                        if (i == 10) this.pbGL.Image = global::WindowsFormsApplication1.Properties.Resources.x_wcisniete;
+                        if (i == 9) this.pbDL.Image = global::WindowsFormsApplication1.Properties.Resources.t_wcisniete;
+                        if (i == 8) this.pbDP.Image = global::WindowsFormsApplication1.Properties.Resources.k_wcisniete;
+                        if (i == 11) this.pbGP.Image = global::WindowsFormsApplication1.Properties.Resources.o_wcisniete;
+                    }
+                    strzalkaWcisnieta[i] = true;
+                    mata[i] = false;
+                }
+            }
+            #endregion
 
 
         }
@@ -322,39 +368,39 @@ namespace WindowsFormsApplication1
             {   //10 przycisków
                 if (b.Equals(ButtonReader.PadButton.UP))
                 {
-                    mata[0] = true;
+                    mata[6] = true;
                 }
                 else if(b.Equals(ButtonReader.PadButton.DOWN))
                 {
-                    mata[1] = true;
+                    mata[5] = true;
                 }
                 else if (b.Equals(ButtonReader.PadButton.RIGHT))
                 {
-                    mata[2] = true;
+                    mata[7] = true;
                 }
                 else if (b.Equals(ButtonReader.PadButton.LEFT))
                 {
-                    mata[3] = true;
+                    mata[4] = true;
                 }
                 else if (b.Equals(ButtonReader.PadButton.X))
                 {
-                    mata[4] = true;
+                    mata[10] = true;
                 }
                 else if (b.Equals(ButtonReader.PadButton.TRIANGLE))
                 {
-                    mata[5] = true;
+                    mata[9] = true;
                 }
                 else if (b.Equals(ButtonReader.PadButton.SQUARE))
                 {
-                    mata[6] = true;
+                    mata[8] = true;
                 }
                 else if (b.Equals(ButtonReader.PadButton.CIRCLE))
                 {
-                    mata[7] = true;
+                    mata[11] = true;
                 }
                 else if (b.Equals(ButtonReader.PadButton.SELECT))
                 {
-                    mata[8] = true;
+                    mata[12] = true;
                     //za jaki przycisk mial odpowiadac select na macie? Pauza?
                     pauza();
                     status.pauza.Show();
@@ -362,7 +408,7 @@ namespace WindowsFormsApplication1
                 }
                 else if (b.Equals(ButtonReader.PadButton.START))
                 {
-                    mata[9] = true;
+                    mata[13] = true;
                     status.reader.start();
                     timer1.Start();
                     kontrCale.play();
@@ -378,47 +424,47 @@ namespace WindowsFormsApplication1
             //up -W
             if (e.nKeyCode == 87)
             {
-                mata[0] = true;
+                mata[6] = true;
             }
             //down - X
             if (e.nKeyCode == 88)
             {
-                mata[1] = true;
+                mata[5] = true;
             }
             //right -D
             if (e.nKeyCode == 68)
             {
-                mata[2] = true;
+                mata[7] = true;
             }
             //left - A
             if (e.nKeyCode == 65)
             {
-                mata[3] = true;
+                mata[4] = true;
             }
             //x - Q
             if (e.nKeyCode == 81)
             {
-                mata[4] = true;
+                mata[10] = true;
             }
             //TRAINGLE - Z
             if (e.nKeyCode == 90)
             {
-                mata[5] = true;
+                mata[9] = true;
             }
             //SQAURE - C
             if (e.nKeyCode == 67)
             {
-                mata[6] = true;
+                mata[8] = true;
             }
             //CIRCLE-E
             if (e.nKeyCode == 69)
             {
-                mata[7] = true;
+                mata[11] = true;
             }
             //select - spacja
             if (e.nKeyCode == 32)
             {
-                mata[8] = true;
+                mata[12] = true;
                 pauza();
                 status.pauza.Show();
                 status.reader.stop();
@@ -426,7 +472,7 @@ namespace WindowsFormsApplication1
             //start - S
             if (e.nKeyCode == 83)
             {
-                mata[9] = true;
+                mata[13] = true;
                 status.reader.start();
                 timer1.Start();
                 kontrCale.play();

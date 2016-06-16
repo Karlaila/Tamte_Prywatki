@@ -242,6 +242,30 @@
   <ItemGroup>
     <None Include="Resources\x_wcisniete.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dol_wcisniete_obwod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gora_wcisniete_obwod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_wcisniete_obwod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lewo_wcisniete_obwod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_wcisniete_obwod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prawo_wcisniete_obwod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t_wcisniete_obwod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x_wcisniete_obwod.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
