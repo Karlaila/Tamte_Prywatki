@@ -65,10 +65,10 @@
             // vCale
             // 
             this.vCale.Enabled = true;
-            this.vCale.Location = new System.Drawing.Point(357, 23);
+            this.vCale.Location = new System.Drawing.Point(498, 60);
             this.vCale.Name = "vCale";
             this.vCale.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("vCale.OcxState")));
-            this.vCale.Size = new System.Drawing.Size(172, 254);
+            this.vCale.Size = new System.Drawing.Size(362, 455);
             this.vCale.TabIndex = 0;
             this.vCale.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.vCale_PlayStateChange);
             this.vCale.KeyDownEvent += new AxWMPLib._WMPOCXEvents_KeyDownEventHandler(this.vCale_KeyDownEvent);
@@ -77,40 +77,52 @@
             // vNogi
             // 
             this.vNogi.Enabled = true;
-            this.vNogi.Location = new System.Drawing.Point(25, 12);
+            this.vNogi.Location = new System.Drawing.Point(54, 60);
             this.vNogi.Name = "vNogi";
             this.vNogi.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("vNogi.OcxState")));
-            this.vNogi.Size = new System.Drawing.Size(211, 85);
+            this.vNogi.Size = new System.Drawing.Size(362, 148);
             this.vNogi.TabIndex = 1;
             // 
             // bPowrot
             // 
-            this.bPowrot.Location = new System.Drawing.Point(25, 291);
+            this.bPowrot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
+            this.bPowrot.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bPowrot.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPowrot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
+            this.bPowrot.Location = new System.Drawing.Point(54, 536);
             this.bPowrot.Name = "bPowrot";
-            this.bPowrot.Size = new System.Drawing.Size(75, 23);
+            this.bPowrot.Size = new System.Drawing.Size(172, 23);
             this.bPowrot.TabIndex = 11;
-            this.bPowrot.Text = "powrót";
-            this.bPowrot.UseVisualStyleBackColor = true;
+            this.bPowrot.Text = "POWRÓT";
+            this.bPowrot.UseVisualStyleBackColor = false;
             this.bPowrot.Click += new System.EventHandler(this.bPowrot_Click);
             // 
             // bPauza
             // 
-            this.bPauza.Location = new System.Drawing.Point(123, 291);
+            this.bPauza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
+            this.bPauza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bPauza.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPauza.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
+            this.bPauza.Location = new System.Drawing.Point(244, 536);
             this.bPauza.Name = "bPauza";
-            this.bPauza.Size = new System.Drawing.Size(75, 23);
+            this.bPauza.Size = new System.Drawing.Size(172, 23);
             this.bPauza.TabIndex = 12;
-            this.bPauza.Text = "Pauza";
-            this.bPauza.UseVisualStyleBackColor = true;
+            this.bPauza.Text = "PAUZA";
+            this.bPauza.UseVisualStyleBackColor = false;
             this.bPauza.Click += new System.EventHandler(this.bPauza_Click);
             // 
             // bPomoc
             // 
-            this.bPomoc.Location = new System.Drawing.Point(227, 291);
+            this.bPomoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
+            this.bPomoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bPomoc.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPomoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
+            this.bPomoc.Location = new System.Drawing.Point(498, 536);
             this.bPomoc.Name = "bPomoc";
-            this.bPomoc.Size = new System.Drawing.Size(75, 23);
+            this.bPomoc.Size = new System.Drawing.Size(172, 23);
             this.bPomoc.TabIndex = 13;
-            this.bPomoc.Text = "Pomoc";
-            this.bPomoc.UseVisualStyleBackColor = true;
+            this.bPomoc.Text = "POMOC";
+            this.bPomoc.UseVisualStyleBackColor = false;
             this.bPomoc.Click += new System.EventHandler(this.bPomoc_Click);
             // 
             // timer1
@@ -121,7 +133,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(239, 172);
+            this.label1.Location = new System.Drawing.Point(423, 328);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 14;
@@ -130,7 +142,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(262, 151);
+            this.label2.Location = new System.Drawing.Point(446, 278);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 15;
@@ -138,98 +150,111 @@
             // 
             // startButton
             // 
-            this.startButton.Location = new System.Drawing.Point(339, 291);
+            this.startButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
+            this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.startButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
+            this.startButton.Location = new System.Drawing.Point(688, 536);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(75, 23);
+            this.startButton.Size = new System.Drawing.Size(172, 23);
             this.startButton.TabIndex = 15;
-            this.startButton.Text = "Start";
-            this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Text = "START";
+            this.startButton.UseVisualStyleBackColor = false;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // pbL
             // 
+            this.pbL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(224)))));
             this.pbL.Image = global::WindowsFormsApplication1.Properties.Resources.lewo;
-            this.pbL.Location = new System.Drawing.Point(25, 171);
+            this.pbL.Location = new System.Drawing.Point(78, 319);
             this.pbL.Name = "pbL";
-            this.pbL.Size = new System.Drawing.Size(58, 50);
+            this.pbL.Size = new System.Drawing.Size(99, 90);
             this.pbL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbL.TabIndex = 10;
             this.pbL.TabStop = false;
             // 
             // pbDL
             // 
+            this.pbDL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(224)))));
             this.pbDL.Image = global::WindowsFormsApplication1.Properties.Resources.t;
-            this.pbDL.Location = new System.Drawing.Point(25, 227);
+            this.pbDL.Location = new System.Drawing.Point(78, 415);
             this.pbDL.Name = "pbDL";
-            this.pbDL.Size = new System.Drawing.Size(58, 50);
+            this.pbDL.Size = new System.Drawing.Size(99, 90);
             this.pbDL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDL.TabIndex = 9;
             this.pbDL.TabStop = false;
             // 
             // pbD
             // 
+            this.pbD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(224)))));
             this.pbD.Image = global::WindowsFormsApplication1.Properties.Resources.dol;
-            this.pbD.Location = new System.Drawing.Point(89, 227);
+            this.pbD.Location = new System.Drawing.Point(183, 415);
             this.pbD.Name = "pbD";
-            this.pbD.Size = new System.Drawing.Size(58, 50);
+            this.pbD.Size = new System.Drawing.Size(99, 90);
             this.pbD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbD.TabIndex = 8;
             this.pbD.TabStop = false;
             // 
             // pbDP
             // 
+            this.pbDP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(224)))));
             this.pbDP.Image = global::WindowsFormsApplication1.Properties.Resources.k;
-            this.pbDP.Location = new System.Drawing.Point(153, 228);
+            this.pbDP.Location = new System.Drawing.Point(288, 415);
             this.pbDP.Name = "pbDP";
-            this.pbDP.Size = new System.Drawing.Size(58, 50);
+            this.pbDP.Size = new System.Drawing.Size(99, 90);
             this.pbDP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDP.TabIndex = 7;
             this.pbDP.TabStop = false;
             // 
             // pbP
             // 
+            this.pbP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(224)))));
             this.pbP.Image = global::WindowsFormsApplication1.Properties.Resources.prawo_z;
-            this.pbP.Location = new System.Drawing.Point(153, 171);
+            this.pbP.Location = new System.Drawing.Point(288, 319);
             this.pbP.Name = "pbP";
-            this.pbP.Size = new System.Drawing.Size(58, 50);
+            this.pbP.Size = new System.Drawing.Size(99, 90);
             this.pbP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbP.TabIndex = 6;
             this.pbP.TabStop = false;
             // 
             // pbS
             // 
-            this.pbS.Location = new System.Drawing.Point(89, 171);
+            this.pbS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(224)))));
+            this.pbS.Location = new System.Drawing.Point(183, 319);
             this.pbS.Name = "pbS";
-            this.pbS.Size = new System.Drawing.Size(56, 50);
+            this.pbS.Size = new System.Drawing.Size(99, 90);
             this.pbS.TabIndex = 5;
             this.pbS.TabStop = false;
             // 
             // pbGL
             // 
+            this.pbGL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(224)))));
             this.pbGL.Image = global::WindowsFormsApplication1.Properties.Resources.x;
-            this.pbGL.Location = new System.Drawing.Point(25, 115);
+            this.pbGL.Location = new System.Drawing.Point(78, 223);
             this.pbGL.Name = "pbGL";
-            this.pbGL.Size = new System.Drawing.Size(58, 50);
+            this.pbGL.Size = new System.Drawing.Size(99, 90);
             this.pbGL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbGL.TabIndex = 4;
             this.pbGL.TabStop = false;
             // 
             // pbGP
             // 
+            this.pbGP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(224)))));
             this.pbGP.Image = global::WindowsFormsApplication1.Properties.Resources.o;
-            this.pbGP.Location = new System.Drawing.Point(153, 115);
+            this.pbGP.Location = new System.Drawing.Point(288, 223);
             this.pbGP.Name = "pbGP";
-            this.pbGP.Size = new System.Drawing.Size(58, 50);
+            this.pbGP.Size = new System.Drawing.Size(99, 90);
             this.pbGP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbGP.TabIndex = 3;
             this.pbGP.TabStop = false;
             // 
             // pbG
             // 
+            this.pbG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(224)))));
             this.pbG.Image = global::WindowsFormsApplication1.Properties.Resources.gora;
-            this.pbG.Location = new System.Drawing.Point(89, 115);
+            this.pbG.Location = new System.Drawing.Point(183, 223);
             this.pbG.Name = "pbG";
-            this.pbG.Size = new System.Drawing.Size(56, 50);
+            this.pbG.Size = new System.Drawing.Size(99, 90);
             this.pbG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbG.TabIndex = 2;
             this.pbG.TabStop = false;
@@ -237,7 +262,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(242, 207);
+            this.label3.Location = new System.Drawing.Point(426, 363);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 16;
@@ -247,7 +272,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 326);
+            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.tlo2;
+            this.ClientSize = new System.Drawing.Size(884, 571);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.startButton);
@@ -266,6 +292,7 @@
             this.Controls.Add(this.pbG);
             this.Controls.Add(this.vNogi);
             this.Controls.Add(this.vCale);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "oKurs";
             this.Text = "oKurs";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.wyjdz);

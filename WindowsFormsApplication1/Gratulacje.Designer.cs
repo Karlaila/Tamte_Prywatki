@@ -40,55 +40,66 @@
             // player
             // 
             this.player.Enabled = true;
-            this.player.Location = new System.Drawing.Point(283, 30);
+            this.player.Location = new System.Drawing.Point(405, 68);
             this.player.Name = "player";
             this.player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("player.OcxState")));
-            this.player.Size = new System.Drawing.Size(163, 264);
+            this.player.Size = new System.Drawing.Size(456, 428);
             this.player.TabIndex = 0;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(13, 30);
+            this.richTextBox1.Location = new System.Drawing.Point(37, 68);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(241, 161);
+            this.richTextBox1.Size = new System.Drawing.Size(329, 261);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             // 
             // bPowrot
             // 
-            this.bPowrot.Location = new System.Drawing.Point(65, 197);
+            this.bPowrot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
+            this.bPowrot.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPowrot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
+            this.bPowrot.Location = new System.Drawing.Point(37, 347);
             this.bPowrot.Name = "bPowrot";
-            this.bPowrot.Size = new System.Drawing.Size(119, 23);
+            this.bPowrot.Size = new System.Drawing.Size(329, 45);
             this.bPowrot.TabIndex = 2;
             this.bPowrot.Text = "Powrót do menu";
-            this.bPowrot.UseVisualStyleBackColor = true;
+            this.bPowrot.UseVisualStyleBackColor = false;
             this.bPowrot.Click += new System.EventHandler(this.bPowrot_Click);
             // 
             // bPowtorz
             // 
-            this.bPowtorz.Location = new System.Drawing.Point(65, 226);
+            this.bPowtorz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
+            this.bPowtorz.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPowtorz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
+            this.bPowtorz.Location = new System.Drawing.Point(37, 398);
             this.bPowtorz.Name = "bPowtorz";
-            this.bPowtorz.Size = new System.Drawing.Size(119, 23);
+            this.bPowtorz.Size = new System.Drawing.Size(329, 45);
             this.bPowtorz.TabIndex = 3;
             this.bPowtorz.Text = "Powtórz poziom";
-            this.bPowtorz.UseVisualStyleBackColor = true;
+            this.bPowtorz.UseVisualStyleBackColor = false;
             this.bPowtorz.Click += new System.EventHandler(this.bPowtorz_Click);
             // 
             // bPrzejdz
             // 
-            this.bPrzejdz.Location = new System.Drawing.Point(65, 256);
+            this.bPrzejdz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
+            this.bPrzejdz.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPrzejdz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
+            this.bPrzejdz.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bPrzejdz.Location = new System.Drawing.Point(37, 449);
             this.bPrzejdz.Name = "bPrzejdz";
-            this.bPrzejdz.Size = new System.Drawing.Size(119, 38);
+            this.bPrzejdz.Size = new System.Drawing.Size(329, 45);
             this.bPrzejdz.TabIndex = 4;
-            this.bPrzejdz.Text = "Przejdź do kolejnego poziomu";
-            this.bPrzejdz.UseVisualStyleBackColor = true;
+            this.bPrzejdz.Text = "Przejdz do kolejnego poziomu";
+            this.bPrzejdz.UseVisualStyleBackColor = false;
             this.bPrzejdz.Click += new System.EventHandler(this.bPrzejdz_Click);
             // 
             // Gratulacje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 306);
+            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.tlo2;
+            this.ClientSize = new System.Drawing.Size(884, 571);
             this.Controls.Add(this.bPrzejdz);
             this.Controls.Add(this.bPowtorz);
             this.Controls.Add(this.bPowrot);
