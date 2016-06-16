@@ -258,7 +258,6 @@ namespace WindowsFormsApplication1
             //prymitywny kod(w tym momencie zapali Ci sie krzyzyk i strzalka w prawo)
             timeToStrzalka += timer1.Interval;
             for(int i = 0; i < strzalkaWcisnieta.Length; i++)
->>>>>>> 2391df1843aeb119049fbab753b13784362b4160
             {
                 if (strzalkaWcisnieta[i])
                 {
