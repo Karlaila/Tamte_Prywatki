@@ -36,9 +36,9 @@ namespace WindowsFormsApplication1
         public volatile bool isRunning = false;
         private Thread readerThread;
 
-        public UsbReader(oKurs form)
+        public UsbReader()
         {
-            this.form = form;
+            this.form = status.kurs;
         }
 
         public void setRunning(bool value)
@@ -143,6 +143,7 @@ namespace WindowsFormsApplication1
                         pressedButtons += b.ToString() + " ";
                     }
                     form.setText(pressedButtons);
+                    form.setMata(pressed);
                 }
 
 

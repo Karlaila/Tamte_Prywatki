@@ -7,7 +7,7 @@ using System.Collections;
 
 namespace WindowsFormsApplication1
 {
-    class ButtonReader
+    public class ButtonReader
     {
         private const int ARROWS_BYTE = 5;
         private const int XBOX_BYTE = 6;
