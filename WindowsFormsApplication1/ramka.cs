@@ -16,24 +16,31 @@ namespace WindowsFormsApplication1
         public string lp;
         public string dane;
         private string pPlik;
-        private StreamReader file;
+        private StreamWriter file;
 
         public ramka()
         {
             // nawiązanie połączenia z 
             data = DateTime.Today.ToString("d");
-            pPlik = status.pDane + status.nUzytk;
+            pPlik = status.pDane + status.nUzytk + ".txt";
             try
             {
-                file = new StreamReader(pPlik, true);
+                file = new StreamWriter(pPlik);
             }
             catch (Exception ex)
             {
                 File.Create(pPlik);
+                file = new StreamWriter(pPlik);
             }
         }
 
-        // Do zrobienia zapisywanie danych w pliku
+        //ramka: data poziom podejście czas trwania(s) poprawność(%) średni czas odpowiedzi(ds)
+        public void zapis(int poziom, int nrPodejscia, int czas, int popr, int sczas)
+        {
+            dane = data + " " + poziom.ToString() + " " + nrPodejscia.ToString() + czas.ToString() + " " + popr.ToString() + " " + sczas.ToString();
+            file.WriteLine(dane);
+            Console.WriteLine("udało się " + pPlik);
+        }
 
         // Do zrobienia odczytywanie danej z pliku
 

@@ -53,6 +53,7 @@ namespace WindowsFormsApplication1
             status.wyniki = new oWyniki();
             status.pauza = new oPauza();
             status.pomoc = new oPomoc();
+            status.gratulacje = new Gratulacje();
             // tutaj chcę wrzucić włączanie Twojej instancji, ale czy na pewno w niej będzie potrzebny argument form? 
             // wważnas
             status.reader = new UsbReader();
@@ -100,8 +101,6 @@ namespace WindowsFormsApplication1
                 }
                 else if (czyOk)
                 {
-                    // nowy plik
-                    File.Create(status.pDane + nazwa);
                     // dodaj do bazy użytkowników
                     using (System.IO.StreamWriter file = new System.IO.StreamWriter(status.pUzytk, true))
                     {

@@ -22,17 +22,22 @@ namespace WindowsFormsApplication1
         public void film()
         {
             player.URL = "filmy/wWybor.avi";
+            status.nrPodejscia++;
         }
 
         private void bPowrot_Click(object sender, EventArgs e)
         {
+            player.Ctlcontrols.stop();
             status.menu.Show();
+            status.menu.film();
             this.Hide();
         }
 
         private void oWybor_FormClosing(object sender, FormClosingEventArgs e)
         {
+            player.Ctlcontrols.stop();
             status.menu.Show();
+            status.menu.film();
             this.Hide();
         }
 

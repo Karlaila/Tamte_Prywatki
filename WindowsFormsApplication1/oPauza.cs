@@ -30,6 +30,7 @@ namespace WindowsFormsApplication1
         private void oPauza_FormClosing(object sender, FormClosingEventArgs e)
         {
             status.kurs.uruchom();
+            status.reader.start();
             this.Hide();
         }
 

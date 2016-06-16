@@ -28,6 +28,7 @@ namespace WindowsFormsApplication1
         {
             status.kurs.Show();
             status.kurs.film();
+            status.poziom = 1;
             axWindowsMediaPlayer1.Ctlcontrols.stop();
             this.Hide();
         }
@@ -57,7 +58,9 @@ namespace WindowsFormsApplication1
 
         private void wyjdz(object sender, EventArgs e)
         {
+            status.kurs.Close();
             Application.Exit();
+            status.menu.Close();
         }
 
         private void wyjdz(object sender, FormClosingEventArgs e)

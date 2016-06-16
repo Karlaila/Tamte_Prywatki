@@ -20,12 +20,14 @@ namespace WindowsFormsApplication1
         private void bPowrot_Click(object sender, EventArgs e)
         {
             status.menu.Show();
+            status.menu.film();
             this.Hide();
         }
 
         private void oWyniki_FormClosing(object sender, FormClosingEventArgs e)
         {
             status.menu.Show();
+            status.menu.film();
             this.Hide();
         }
     }

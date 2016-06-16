@@ -55,11 +55,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
-            this.label1.Font = new System.Drawing.Font("Arial Unicode MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
             this.label1.Location = new System.Drawing.Point(12, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 72);
+            this.label1.Size = new System.Drawing.Size(288, 62);
             this.label1.TabIndex = 1;
             this.label1.Text = "Wybierz użytkownika\r\nlub stwórz nowego:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -68,11 +68,11 @@
             // 
             this.rBwybierz.AutoSize = true;
             this.rBwybierz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
-            this.rBwybierz.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rBwybierz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rBwybierz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
             this.rBwybierz.Location = new System.Drawing.Point(12, 162);
             this.rBwybierz.Name = "rBwybierz";
-            this.rBwybierz.Size = new System.Drawing.Size(199, 25);
+            this.rBwybierz.Size = new System.Drawing.Size(198, 24);
             this.rBwybierz.TabIndex = 2;
             this.rBwybierz.TabStop = true;
             this.rBwybierz.Text = "Mam już swoje konto.";
@@ -83,11 +83,11 @@
             // 
             this.rBnowe.AutoSize = true;
             this.rBnowe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
-            this.rBnowe.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rBnowe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rBnowe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
             this.rBnowe.Location = new System.Drawing.Point(12, 261);
             this.rBnowe.Name = "rBnowe";
-            this.rBnowe.Size = new System.Drawing.Size(248, 25);
+            this.rBnowe.Size = new System.Drawing.Size(245, 24);
             this.rBnowe.TabIndex = 3;
             this.rBnowe.TabStop = true;
             this.rBnowe.Text = "Chcę utworzyć nowe konto.";
@@ -96,17 +96,18 @@
             // 
             // cBwybierz
             // 
+            this.cBwybierz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBwybierz.FormattingEnabled = true;
             this.cBwybierz.Location = new System.Drawing.Point(12, 193);
             this.cBwybierz.Name = "cBwybierz";
-            this.cBwybierz.Size = new System.Drawing.Size(343, 21);
+            this.cBwybierz.Size = new System.Drawing.Size(343, 28);
             this.cBwybierz.TabIndex = 4;
             // 
             // bAnuluj
             // 
             this.bAnuluj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
             this.bAnuluj.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bAnuluj.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAnuluj.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAnuluj.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
             this.bAnuluj.Location = new System.Drawing.Point(12, 409);
             this.bAnuluj.Name = "bAnuluj";
@@ -120,7 +121,7 @@
             // 
             this.bOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
             this.bOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bOk.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bOk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
             this.bOk.Location = new System.Drawing.Point(207, 409);
             this.bOk.Name = "bOk";
@@ -134,19 +135,20 @@
             // 
             this.lNazwa.AutoSize = true;
             this.lNazwa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
-            this.lNazwa.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lNazwa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lNazwa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
             this.lNazwa.Location = new System.Drawing.Point(8, 293);
             this.lNazwa.Name = "lNazwa";
-            this.lNazwa.Size = new System.Drawing.Size(199, 21);
+            this.lNazwa.Size = new System.Drawing.Size(196, 20);
             this.lNazwa.TabIndex = 7;
             this.lNazwa.Text = "Wpisz nazwę użytkownika:";
             // 
             // tBnazwa
             // 
+            this.tBnazwa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBnazwa.Location = new System.Drawing.Point(8, 335);
             this.tBnazwa.Name = "tBnazwa";
-            this.tBnazwa.Size = new System.Drawing.Size(343, 20);
+            this.tBnazwa.Size = new System.Drawing.Size(343, 26);
             this.tBnazwa.TabIndex = 8;
             // 
             // oLogowania

@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
             richTextBox1.Enabled = false;
-            richTextBox1.Text = "Tu należy coś wpisać, bo w sumie to nie mamy filmu. Tekst zależny od poziomu. status.oPoziomu[status.poziom]";
+            richTextBox1.Text = "Powtarzaj ruchy pokazane na wideo. Na polu ze strzałkami żółty obwód wskazuje, że to pole powinno się nacisnąć na macie. Różowe wypełnienie, oznacza, że nacisk został odczytany. W celu powrotu do ćwiczenia naciśnij pierwszy z guzików lub START na macie. W celu powrotu do menu naciśnij drugi z guzików lub SELECT na macie.";
         }
 
         private void bPowrot_Click(object sender, EventArgs e)

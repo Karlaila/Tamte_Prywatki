@@ -87,11 +87,11 @@
             // 
             this.bPowrot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
             this.bPowrot.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bPowrot.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPowrot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bPowrot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
-            this.bPowrot.Location = new System.Drawing.Point(54, 536);
+            this.bPowrot.Location = new System.Drawing.Point(54, 529);
             this.bPowrot.Name = "bPowrot";
-            this.bPowrot.Size = new System.Drawing.Size(172, 23);
+            this.bPowrot.Size = new System.Drawing.Size(172, 30);
             this.bPowrot.TabIndex = 11;
             this.bPowrot.Text = "POWRÓT";
             this.bPowrot.UseVisualStyleBackColor = false;
@@ -101,11 +101,11 @@
             // 
             this.bPauza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
             this.bPauza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bPauza.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPauza.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bPauza.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
-            this.bPauza.Location = new System.Drawing.Point(244, 536);
+            this.bPauza.Location = new System.Drawing.Point(244, 529);
             this.bPauza.Name = "bPauza";
-            this.bPauza.Size = new System.Drawing.Size(172, 23);
+            this.bPauza.Size = new System.Drawing.Size(172, 30);
             this.bPauza.TabIndex = 12;
             this.bPauza.Text = "PAUZA";
             this.bPauza.UseVisualStyleBackColor = false;
@@ -115,11 +115,11 @@
             // 
             this.bPomoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
             this.bPomoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bPomoc.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPomoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bPomoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
-            this.bPomoc.Location = new System.Drawing.Point(498, 536);
+            this.bPomoc.Location = new System.Drawing.Point(498, 529);
             this.bPomoc.Name = "bPomoc";
-            this.bPomoc.Size = new System.Drawing.Size(172, 23);
+            this.bPomoc.Size = new System.Drawing.Size(172, 30);
             this.bPomoc.TabIndex = 13;
             this.bPomoc.Text = "POMOC";
             this.bPomoc.UseVisualStyleBackColor = false;
@@ -152,11 +152,11 @@
             // 
             this.startButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
             this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.startButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
-            this.startButton.Location = new System.Drawing.Point(688, 536);
+            this.startButton.Location = new System.Drawing.Point(688, 529);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(172, 23);
+            this.startButton.Size = new System.Drawing.Size(172, 30);
             this.startButton.TabIndex = 15;
             this.startButton.Text = "START";
             this.startButton.UseVisualStyleBackColor = false;

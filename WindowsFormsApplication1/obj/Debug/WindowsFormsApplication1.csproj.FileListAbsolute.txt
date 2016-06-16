@@ -44,8 +44,5 @@ D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1
 D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\bin\Debug\LibUsbDotNet.xml
 C:\Users\Karolina\Documents\0studia\sem8\Tamte_Prywatki\WindowsFormsApplication1\bin\Debug\LibUsbDotNet.dll
 C:\Users\Karolina\Documents\0studia\sem8\Tamte_Prywatki\WindowsFormsApplication1\bin\Debug\LibUsbDotNet.xml
-<<<<<<< HEAD
 C:\Users\Karolina\Documents\0studia\sem8\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Gratulacje.resources
-=======
 D:\STUDIA\II stopien\TELEMATYKA MEDYCZNA\Tamte_Prywatki\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Gratulacje.resources
->>>>>>> origin/master

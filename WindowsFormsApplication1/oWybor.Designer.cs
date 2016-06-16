@@ -51,7 +51,7 @@
             // 
             this.bPowrot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
             this.bPowrot.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bPowrot.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPowrot.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bPowrot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
             this.bPowrot.Location = new System.Drawing.Point(12, 441);
             this.bPowrot.Name = "bPowrot";
@@ -77,9 +77,9 @@
             this.wKroku.Controls.Add(this.rbOP);
             this.wKroku.Controls.Add(this.rbKL);
             this.wKroku.Controls.Add(this.rbKP);
-            this.wKroku.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.wKroku.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.wKroku.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
-            this.wKroku.Location = new System.Drawing.Point(12, 242);
+            this.wKroku.Location = new System.Drawing.Point(12, 93);
             this.wKroku.Name = "wKroku";
             this.wKroku.Size = new System.Drawing.Size(356, 161);
             this.wKroku.TabIndex = 2;
@@ -90,10 +90,10 @@
             // rbOL
             // 
             this.rbOL.AutoSize = true;
-            this.rbOL.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rbOL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rbOL.Location = new System.Drawing.Point(7, 121);
             this.rbOL.Name = "rbOL";
-            this.rbOL.Size = new System.Drawing.Size(218, 25);
+            this.rbOL.Size = new System.Drawing.Size(215, 24);
             this.rbOL.TabIndex = 3;
             this.rbOL.TabStop = true;
             this.rbOL.Text = "Obrót po kwadracie w lewo";
@@ -102,10 +102,10 @@
             // rbOP
             // 
             this.rbOP.AutoSize = true;
-            this.rbOP.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rbOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rbOP.Location = new System.Drawing.Point(6, 90);
             this.rbOP.Name = "rbOP";
-            this.rbOP.Size = new System.Drawing.Size(229, 25);
+            this.rbOP.Size = new System.Drawing.Size(226, 24);
             this.rbOP.TabIndex = 2;
             this.rbOP.TabStop = true;
             this.rbOP.Text = "Obrót po kwadracie w prawo";
@@ -114,10 +114,10 @@
             // rbKL
             // 
             this.rbKL.AutoSize = true;
-            this.rbKL.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rbKL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rbKL.Location = new System.Drawing.Point(6, 59);
             this.rbKL.Name = "rbKL";
-            this.rbKL.Size = new System.Drawing.Size(207, 25);
+            this.rbKL.Size = new System.Drawing.Size(201, 24);
             this.rbKL.TabIndex = 1;
             this.rbKL.TabStop = true;
             this.rbKL.Text = "Krok podstawowy w lewo";
@@ -126,10 +126,10 @@
             // rbKP
             // 
             this.rbKP.AutoSize = true;
-            this.rbKP.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rbKP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rbKP.Location = new System.Drawing.Point(7, 28);
             this.rbKP.Name = "rbKP";
-            this.rbKP.Size = new System.Drawing.Size(218, 25);
+            this.rbKP.Size = new System.Drawing.Size(212, 24);
             this.rbKP.TabIndex = 0;
             this.rbKP.TabStop = true;
             this.rbKP.Text = "Krok podstawowy w prawo";
@@ -142,9 +142,9 @@
             this.wpoziom.Controls.Add(this.rbBP);
             this.wpoziom.Controls.Add(this.rbC);
             this.wpoziom.Controls.Add(this.rbKPK);
-            this.wpoziom.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.wpoziom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.wpoziom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
-            this.wpoziom.Location = new System.Drawing.Point(12, 68);
+            this.wpoziom.Location = new System.Drawing.Point(12, 260);
             this.wpoziom.Name = "wpoziom";
             this.wpoziom.Size = new System.Drawing.Size(356, 141);
             this.wpoziom.TabIndex = 3;
@@ -155,10 +155,10 @@
             // rbM
             // 
             this.rbM.AutoSize = true;
-            this.rbM.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rbM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rbM.Location = new System.Drawing.Point(7, 92);
             this.rbM.Name = "rbM";
-            this.rbM.Size = new System.Drawing.Size(95, 25);
+            this.rbM.Size = new System.Drawing.Size(93, 24);
             this.rbM.TabIndex = 3;
             this.rbM.TabStop = true;
             this.rbM.Text = "z muzyką";
@@ -167,10 +167,10 @@
             // rbBP
             // 
             this.rbBP.AutoSize = true;
-            this.rbBP.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rbBP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rbBP.Location = new System.Drawing.Point(7, 69);
             this.rbBP.Name = "rbBP";
-            this.rbBP.Size = new System.Drawing.Size(147, 25);
+            this.rbBP.Size = new System.Drawing.Size(145, 24);
             this.rbBP.TabIndex = 2;
             this.rbBP.TabStop = true;
             this.rbBP.Text = "bez podpowiedzi";
@@ -179,10 +179,10 @@
             // rbC
             // 
             this.rbC.AutoSize = true;
-            this.rbC.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rbC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rbC.Location = new System.Drawing.Point(7, 44);
             this.rbC.Name = "rbC";
-            this.rbC.Size = new System.Drawing.Size(224, 25);
+            this.rbC.Size = new System.Drawing.Size(221, 24);
             this.rbC.TabIndex = 1;
             this.rbC.TabStop = true;
             this.rbC.Text = "Cały krok z podpowiedziami";
@@ -191,10 +191,10 @@
             // rbKPK
             // 
             this.rbKPK.AutoSize = true;
-            this.rbKPK.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rbKPK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rbKPK.Location = new System.Drawing.Point(7, 20);
             this.rbKPK.Name = "rbKPK";
-            this.rbKPK.Size = new System.Drawing.Size(126, 25);
+            this.rbKPK.Size = new System.Drawing.Size(124, 24);
             this.rbKPK.TabIndex = 0;
             this.rbKPK.TabStop = true;
             this.rbKPK.Text = "Krok po kroku";
@@ -204,7 +204,7 @@
             // 
             this.bWybierz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
             this.bWybierz.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bWybierz.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bWybierz.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bWybierz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
             this.bWybierz.Location = new System.Drawing.Point(207, 441);
             this.bWybierz.Name = "bWybierz";

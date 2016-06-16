@@ -46,6 +46,7 @@
             // 
             // tekst
             // 
+            this.tekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tekst.Location = new System.Drawing.Point(41, 68);
             this.tekst.Name = "tekst";
             this.tekst.Size = new System.Drawing.Size(329, 357);
@@ -55,7 +56,7 @@
             // bPowrot
             // 
             this.bPowrot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
-            this.bPowrot.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPowrot.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bPowrot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
             this.bPowrot.Location = new System.Drawing.Point(41, 451);
             this.bPowrot.Name = "bPowrot";

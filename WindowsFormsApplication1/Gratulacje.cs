@@ -15,19 +15,19 @@ namespace WindowsFormsApplication1
         public Gratulacje()
         {
             InitializeComponent();
-            richTextBox1.Text = "Tutaj będzie to co jest mówione na filmie. Film póki co inny.";
+            richTextBox1.Text = "Gratulacje! Udało Ci się ukończyć ten poziom! Aby przejść do kolejnego naciśnij pole START lub przycisk poniżej. Aby potwórzyć ćwiczenie, naciśnij pole SELECT lub przycisk poniżej. Aby powrócić do menu naciśnij przycisk poniżej.";
+            richTextBox1.Enabled = false;
         }
 
         public void filmy()
         {
-            player.URL = "filmy/wInfo.avi";
+            player.URL = "filmy/wGratulacje.avi";
         }
 
         private void bPowrot_Click(object sender, EventArgs e)
         {
             player.Ctlcontrols.stop();
             this.Hide();
-            status.kurs.Hide();
             status.menu.Show();
             status.menu.film();
         }
@@ -36,6 +36,7 @@ namespace WindowsFormsApplication1
         {
             player.Ctlcontrols.stop();
             this.Hide();
+            status.kurs.Show();
             status.kurs.film();
         }
 
@@ -44,6 +45,7 @@ namespace WindowsFormsApplication1
             player.Ctlcontrols.stop();
             status.poziom++;
             this.Hide();
+            status.kurs.Show();
             status.kurs.film();
         }
 

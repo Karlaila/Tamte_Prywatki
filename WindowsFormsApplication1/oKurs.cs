@@ -21,6 +21,9 @@ namespace WindowsFormsApplication1
         private int licznik = 0;
         private int czas = 0;
         private int licznikZP = 0;
+        private int lpoprawne = 0; // liczba poprawnych odpowiedzi
+        private int lniepoprawne = 0; // liczba niepoprawnych odpowiedzi
+        private int sCzasReakcji = 0; // suma czasów reakcji w decysekundach
 
         UsbReader reader = null;
         Thread readerThread = null;
@@ -45,9 +48,13 @@ namespace WindowsFormsApplication1
         public oKurs()
         {
             InitializeComponent();
-            //vCale.uiMode = "none";
+            vCale.uiMode = "none";
             vNogi.uiMode = "none";
             vCale.settings.autoStart = false;
+            label1.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+
         }
 
         #region obsługa filmu
@@ -56,8 +63,10 @@ namespace WindowsFormsApplication1
             int p = status.poziom;
             startButton.Enabled = false;
 
+            vCale.settings.setMode("loop", false);
             vCale.URL = status.zFilmu1[p];
-            vNogi.URL = status.zFilmu1[p];
+            //vNogi.URL = status.zFilmuStopy;
+            //vNogi.Ctlcontrols.stop();
 
             vNogi.settings.volume = 0;
 
@@ -68,8 +77,27 @@ namespace WindowsFormsApplication1
             czas = 0;
             iKroki = 0;
             licznikZP = 0;
-            vCale.settings.setMode("loop", false);
             czytaniec = false;
+            koniec = false;
+            if (status.poziom % 4 == 0)
+            {
+                // muzyka
+                progl = 200;
+            }
+            
+            lpoprawne = 0; // liczba poprawnych odpowiedzi
+            lniepoprawne = 0; // liczba niepoprawnych odpowiedzi
+            sCzasReakcji = 0; // suma czasów reakcji w decysekundach
+
+
+            this.pbG.Image = global::WindowsFormsApplication1.Properties.Resources.gora;
+            this.pbD.Image = global::WindowsFormsApplication1.Properties.Resources.dol;
+            this.pbP.Image = global::WindowsFormsApplication1.Properties.Resources.prawo_z;
+            this.pbL.Image = global::WindowsFormsApplication1.Properties.Resources.lewo;
+            this.pbGL.Image = global::WindowsFormsApplication1.Properties.Resources.x;
+            this.pbDL.Image = global::WindowsFormsApplication1.Properties.Resources.t;
+            this.pbDP.Image = global::WindowsFormsApplication1.Properties.Resources.k;
+            this.pbGP.Image = global::WindowsFormsApplication1.Properties.Resources.o;
 
             kontrCale.play();
             //vCale.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(vCale_PlayStateChange);
@@ -85,6 +113,7 @@ namespace WindowsFormsApplication1
 
         private void pauza()
         {
+            timer1.Stop();
             status.czypauza = true;
             // pauzowanie video
             if (kontrCale.get_isAvailable("pause"))
@@ -100,15 +129,19 @@ namespace WindowsFormsApplication1
         }
 
         public void uruchom()
-        {   
+        {
+            timer1.Start();
             // włączanie wideo
-            if (kontrCale.get_isAvailable("play"))
+            if (status.poziom % 4 != 3)
             {
-                kontrCale.play();
-            }
-            if (kontrNogi.get_isAvailable("play"))
-            {
-                kontrNogi.play();
+                if (kontrCale.get_isAvailable("play"))
+                {
+                    kontrCale.play();
+                }
+                if (kontrNogi.get_isAvailable("play"))
+                {
+                    kontrNogi.play();
+                }
             }
         }
 
@@ -124,7 +157,6 @@ namespace WindowsFormsApplication1
                     if (!czytaniec)
                     {
                         //przechodzimy do nowego video z krokami
-                        vCale.URL = status.zFilmu2[status.poziom];
                         taniec();
                     }
                     break;
@@ -144,13 +176,23 @@ namespace WindowsFormsApplication1
         //zamykanie po sobie
         private void wyjdzM()
         {
-            // DANE?!
+            if (lniepoprawne != 0)
+            {
+                //MessageBox.Show("zapisuje");
+                status.ramka.zapis(status.poziom, status.nrPodejscia, tickToDsec(czas) * 10, lpoprawne / lniepoprawne * 100, tickToDsec(sCzasReakcji) / lniepoprawne);
+            }
+            lpoprawne = 0;
+            lniepoprawne = 0;
+            sCzasReakcji = 0;
+            czaszm = 0;
             timer1.Stop();
             licznik = 0;
             czas = 0;
             iKroki = 0;
             licznikZP = 0;
             vCale.settings.setMode("loop", false);
+            kontrNogi.stop();
+            kontrCale.stop();
             czytaniec = false;
             this.pbG.Image = global::WindowsFormsApplication1.Properties.Resources.gora;
             this.pbD.Image = global::WindowsFormsApplication1.Properties.Resources.dol;
@@ -160,6 +202,29 @@ namespace WindowsFormsApplication1
             this.pbDL.Image = global::WindowsFormsApplication1.Properties.Resources.t;
             this.pbDP.Image = global::WindowsFormsApplication1.Properties.Resources.k;
             this.pbGP.Image = global::WindowsFormsApplication1.Properties.Resources.o;
+        }
+
+        private void pGratulacje()
+        {
+            stop();
+            status.gratulacje.Show();
+            status.gratulacje.filmy();
+        }
+
+        private void start()
+        {
+            status.reader.start();
+            timer1.Start();
+            // Jeśli tryb bez podpowiedzi, to nie ma muzyki
+            if (status.poziom % 4 != 3)
+            {
+                vCale.settings.setMode("loop", true);
+                vNogi.settings.setMode("loop", true);
+                vCale.URL = status.zFilmu2[status.poziom];
+                vNogi.URL = status.zFilmuStopy;
+                kontrCale.play();
+                kontrNogi.play();
+            }
         }
 
         #region obsługa przycisków
@@ -174,6 +239,7 @@ namespace WindowsFormsApplication1
             {
                 wyjdzM();
                 status.menu.Show();
+                status.menu.film();
                 status.kurs.Hide();
             }
             else
@@ -222,13 +288,7 @@ namespace WindowsFormsApplication1
 
         private void startButton_Click(object sender, EventArgs e)
         {
-            status.reader.start();
-            timer1.Start();
-            // Jeśli tryb bez podpowiedzi, to nie ma muzyki
-            if (status.poziom % 4 != 3)
-            {
-                kontrCale.play();
-            }
+            start();
             status.kurs.Focus();
         }
 
@@ -238,12 +298,28 @@ namespace WindowsFormsApplication1
         //rozpoczyna etap tańca
         private void taniec()
         {
+            kontrNogi.stop();
             startButton.Enabled = true;
             czytaniec = true;
-            vCale.settings.setMode("loop", true);
+            /*if (status.poziom % 4 != 3)
+            {
+                //vCale.settings.setMode("loop", true);
+                //vNogi.settings.setMode("loop", true);
+                //vCale.URL = status.zFilmu2[status.poziom];
+                //vNogi.URL = status.zFilmuStopy;
+            }*/
             sKroki = status.sKroki[status.poziom];
             tKroki = status.tKroki[status.poziom];
             licznik = 0;
+            
+            iKroki = 0;
+            zmiana = true;
+            poprawny = false;
+            niepoprawny = false;
+            vPauza = false;
+            prog = 0;
+            isKroki = 0;
+            czaszm = 0;
             // pozycja startowa
             /*
             if (i == 6) this.pbG.Image = global::WindowsFormsApplication1.Properties.Resources.gora_obwod;
@@ -271,6 +347,8 @@ namespace WindowsFormsApplication1
             }
 
         }
+
+        #region zmienne
         //pomocnicze
         private int dsecToTick(int dsec)
         {
@@ -285,9 +363,14 @@ namespace WindowsFormsApplication1
         private int iKroki = 0;
         bool zmiana = true;
         bool poprawny = false;
+        bool niepoprawny = false;
         bool vPauza = false;
         int prog = 0;
         int isKroki = 0;
+        int czaszm = 0;
+        bool koniec = false;
+        int progl = 5;
+        #endregion
 
         // przebieg gry
         private void timer1_Tick(object sender, EventArgs e)
@@ -301,26 +384,44 @@ namespace WindowsFormsApplication1
             if (mata[sKroki[isKroki]] && !poprawny)
             {
                 poprawny = true;
-                // zliczenie punktów
+                lpoprawne++;
+                //niepoprawny = false;
+                sCzasReakcji += czas - czaszm;
+                label1.Text = lpoprawne.ToString() + " poprawne";
+                label2.Text = sCzasReakcji.ToString() + " czas reakacji";
+                label3.Text = lniepoprawne.ToString() + " wszystkie";
+                if (lpoprawne >= progl) koniec = true;
+
             }
+            /*else if (!niepoprawny)
+            {
+                //lniepoprawne++;
+                //niepoprawny = true;
+                //label3.Text = lniepoprawne.ToString() + " niepoprawne";
+            }*/
             #endregion
+
+            if (koniec && iKroki % 6 == 0)
+            {
+                pGratulacje();
+            }
 
             #region zmiana kroków - poziomy 2,3,4
             if (status.poziom % 4 != 1)
             {
                 licznik++;
+                //ZMIANA
                 if (licznik < prog && zmiana)
                 {
                     zerujStrzalke();
                     strzalka[sKroki[isKroki]] = true;
-                    label3.Text = "1zmiana kroków";
                     zmiana = false;
                     poprawny = false;
+                    czaszm = czas;
                 }
                 else if (licznik >= prog)
                 {
                     // czyli gdy koniec czasu na krok, dajemy sygnał do zmiany kroku, bez pauzowania
-                    label3.Text = "2bez pauzy do zmiany";
                     zmiana = true;
                     iKroki++;
                     if (iKroki >= tKroki.Length)
@@ -336,30 +437,29 @@ namespace WindowsFormsApplication1
             #endregion
 
             #region zmiana kroków - poziomy 1
-            label2.Text = tickToDsec(licznikZP).ToString() + " " + iKroki.ToString() + " " + isKroki.ToString();
             if (status.poziom % 4 == 1)
             {
+                //ZMIANA
                 if (licznikZP < prog && zmiana)
                 {
                     licznikZP++;
                     zerujStrzalke();
                     strzalka[sKroki[isKroki]] = true;
-                    label3.Text = "1zmiana kroków";
                     zmiana = false;
                     poprawny = false;
+                    czaszm = czas;
                 }
                 else if (licznikZP >= prog)
                 {
                     if (poprawny)
                     {
                         licznikZP++;
-                        label3.Text = "3. poprawny pauza";
                         //nie pauzujemy, zmieniamy krok na następny)
                         if (vPauza)
                         {
                             vPauza = false;
                             kontrCale.play();
-                            label3.Text = "3a. odpałzowanie";
+                            kontrNogi.play();
                         }
                         zmiana = true;
                         iKroki++;
@@ -373,9 +473,9 @@ namespace WindowsFormsApplication1
                         //czekamy aż naciśnie poprawny
                         if (!vPauza)
                         {
-                            label3.Text = "4. niepoprawny pauza";
                             vPauza = true;
                             kontrCale.pause();
+                            kontrNogi.pause();
                         }
                     }
                 }
@@ -462,7 +562,6 @@ namespace WindowsFormsApplication1
                 this.Invoke(new Action<string>(setText), new object[] { msg });
                 return;
             }
-            label1.Text = msg;
         }
         #endregion
 
@@ -525,7 +624,8 @@ namespace WindowsFormsApplication1
         #endregion
         #region vCale_KeyDownEvent
         private void vCale_KeyDownEvent(object sender, AxWMPLib._WMPOCXEvents_KeyDownEvent e)
-        {  
+        {
+            lniepoprawne++;
             //up -W
             if (e.nKeyCode == 87)
             {
@@ -578,9 +678,7 @@ namespace WindowsFormsApplication1
             if (e.nKeyCode == 83)
             {
                 mata[13] = true;
-                status.reader.start();
-                timer1.Start();
-                kontrCale.play();
+                start();
                 status.kurs.Focus();
             }
         }
