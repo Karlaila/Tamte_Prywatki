@@ -33,19 +33,23 @@
             // 
             // bPowrot
             // 
-            this.bPowrot.Location = new System.Drawing.Point(105, 207);
+            this.bPowrot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
+            this.bPowrot.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPowrot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
+            this.bPowrot.Location = new System.Drawing.Point(149, 440);
             this.bPowrot.Name = "bPowrot";
-            this.bPowrot.Size = new System.Drawing.Size(75, 23);
+            this.bPowrot.Size = new System.Drawing.Size(584, 50);
             this.bPowrot.TabIndex = 0;
             this.bPowrot.Text = "Powrót";
-            this.bPowrot.UseVisualStyleBackColor = true;
+            this.bPowrot.UseVisualStyleBackColor = false;
             this.bPowrot.Click += new System.EventHandler(this.bPowrot_Click);
             // 
             // oWyniki
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.tlo2;
+            this.ClientSize = new System.Drawing.Size(894, 561);
             this.Controls.Add(this.bPowrot);
             this.Name = "oWyniki";
             this.Text = "oWyniki";

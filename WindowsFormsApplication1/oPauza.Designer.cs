@@ -35,29 +35,37 @@
             // 
             // bPowrotKurs
             // 
-            this.bPowrotKurs.Location = new System.Drawing.Point(71, 147);
+            this.bPowrotKurs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
+            this.bPowrotKurs.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bPowrotKurs.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPowrotKurs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
+            this.bPowrotKurs.Location = new System.Drawing.Point(76, 320);
             this.bPowrotKurs.Name = "bPowrotKurs";
-            this.bPowrotKurs.Size = new System.Drawing.Size(139, 23);
+            this.bPowrotKurs.Size = new System.Drawing.Size(329, 45);
             this.bPowrotKurs.TabIndex = 0;
             this.bPowrotKurs.Text = "powrót do kursu";
-            this.bPowrotKurs.UseVisualStyleBackColor = true;
+            this.bPowrotKurs.UseVisualStyleBackColor = false;
             this.bPowrotKurs.Click += new System.EventHandler(this.bPowrotKurs_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(71, 190);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
+            this.button1.Location = new System.Drawing.Point(76, 388);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 23);
+            this.button1.Size = new System.Drawing.Size(329, 45);
             this.button1.TabIndex = 1;
             this.button1.Text = "powrót do menu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(37, 25);
+            this.richTextBox1.Location = new System.Drawing.Point(76, 68);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(201, 96);
+            this.richTextBox1.Size = new System.Drawing.Size(329, 227);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
@@ -65,11 +73,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.tlo2;
+            this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.bPowrotKurs);
             this.Name = "oPauza";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "oPauza";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.oPauza_FormClosing);
             this.ResumeLayout(false);
