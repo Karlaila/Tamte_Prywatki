@@ -133,6 +133,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -165,6 +166,81 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prawo_wcisniete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prawo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prawo_obwod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prawo_z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dol_obwod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dol_wcisniete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gora_obwod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gora_wcisniete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_obwod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k_wcisniete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lewo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lewo_obwod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lewo_wcisniete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_obwod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o_wcisniete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t_obwod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t_wcisniete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x_obwod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x_wcisniete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

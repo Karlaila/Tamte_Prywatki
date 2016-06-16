@@ -22,9 +22,14 @@ namespace WindowsFormsApplication1
         Thread readerThread = null;
         //private enum pMata = status.buttonReader.PadButton
         // mata[i] = true -> przycisk i jest naciśnięty; mata[i] = 0 -> nie jest. 11? WYPEŁNIENIE strzałki
-        private bool[] mata = { false, false, false, false, false, false, false, false, false, false, false };
+        private bool[] mata = { false, false, false, false, false, false, false, false, false, false };
         // strzalka[i] = true -> przycisk i ma być naciśnięty; strzalka[i] = false -> nie ma. 11? BRZEGI strzałki
-        private bool[] strzalka = { false, false, false, false, false, false, false, false, false, false, false };
+        private bool[] strzalka = { false, false, false, false, false, false, false, false, false, false };
+
+        // tymczasowo do sprawdzenia dzialania strzalek
+        private int timeToStrzalka = 0;
+        private bool[] strzalkaWcisnieta = { false, false, false, false, false, false, false, false, false, false };
+        private int[] timeToWygasniecie = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
         public oKurs()
         {
@@ -152,7 +157,7 @@ namespace WindowsFormsApplication1
         private void wyjdz(object sender, FormClosingEventArgs e)
         {
             pauza();
-            // to nie działa z jakiegoś powodu :( 
+           
             status.reader.stop();
             string caption = "Wyjście z kursu.";
             MessageBoxButtons button = MessageBoxButtons.YesNo;
@@ -178,6 +183,7 @@ namespace WindowsFormsApplication1
             status.reader.start();
             timer1.Start();
             kontrCale.play();
+            status.kurs.Focus();
         }
 
         #endregion
@@ -196,6 +202,54 @@ namespace WindowsFormsApplication1
         {
             // sprawdzanie tablicy mata - czy są nowe naciśnięcia? 
             // uzupełnianie tablicy strzałki - co ma być naciśnięte?
+
+            //TESTY:
+            //prymitywny kod(w tym momencie zapali Ci sie krzyzyk i strzalka w prawo)
+            timeToStrzalka += timer1.Interval;
+            for(int i = 0; i < strzalkaWcisnieta.Length; i++)
+            {
+                if (strzalkaWcisnieta[i])
+                {
+                    timeToWygasniecie[i] += timer1.Interval;
+                }
+            }
+          
+            if (timeToStrzalka >= 5000)
+            {   //random 9 if int
+                this.pbP.Image = global::WindowsFormsApplication1.Properties.Resources.prawo_obwod;
+                this.pbGL.Image = global::WindowsFormsApplication1.Properties.Resources.x_obwod;
+                timeToStrzalka = 0;
+            }
+            
+            if (strzalkaWcisnieta[2] && timeToWygasniecie[2] >= 500)
+            {
+                this.pbP.Image = global::WindowsFormsApplication1.Properties.Resources.prawo_z;
+                strzalkaWcisnieta[2] = false;
+                timeToWygasniecie[2] = 0;
+                
+            }
+            if (mata[2] == true)
+            {
+                this.pbP.Image = global::WindowsFormsApplication1.Properties.Resources.prawo_wcisniete;
+                strzalkaWcisnieta[2] = true;
+                mata[2] = false;
+            }
+            if (strzalkaWcisnieta[4] && timeToWygasniecie[4] >= 500)
+            {
+                this.pbGL.Image = global::WindowsFormsApplication1.Properties.Resources.x;
+                strzalkaWcisnieta[4] = false;
+                timeToWygasniecie[4] = 0;
+
+            }
+            if (mata[4] == true)
+            {
+                this.pbGL.Image = global::WindowsFormsApplication1.Properties.Resources.x_wcisniete;
+                strzalkaWcisnieta[4] = true;
+                mata[4] = false;
+            }
+
+
+
         }
 
         public void setText(string msg)
@@ -209,6 +263,124 @@ namespace WindowsFormsApplication1
         }
         #endregion
 
-
+        #region setMata
+        public void setMata(List<ButtonReader.PadButton> pressed)
+        {
+            foreach (ButtonReader.PadButton b in pressed)
+            {   //10 przycisków
+                if (b.Equals(ButtonReader.PadButton.UP))
+                {
+                    mata[0] = true;
+                }
+                else if(b.Equals(ButtonReader.PadButton.DOWN))
+                {
+                    mata[1] = true;
+                }
+                else if (b.Equals(ButtonReader.PadButton.RIGHT))
+                {
+                    mata[2] = true;
+                }
+                else if (b.Equals(ButtonReader.PadButton.LEFT))
+                {
+                    mata[3] = true;
+                }
+                else if (b.Equals(ButtonReader.PadButton.X))
+                {
+                    mata[4] = true;
+                }
+                else if (b.Equals(ButtonReader.PadButton.TRIANGLE))
+                {
+                    mata[5] = true;
+                }
+                else if (b.Equals(ButtonReader.PadButton.SQUARE))
+                {
+                    mata[6] = true;
+                }
+                else if (b.Equals(ButtonReader.PadButton.CIRCLE))
+                {
+                    mata[7] = true;
+                }
+                else if (b.Equals(ButtonReader.PadButton.SELECT))
+                {
+                    mata[8] = true;
+                    //za jaki przycisk mial odpowiadac select na macie? Pauza?
+                    pauza();
+                    status.pauza.Show();
+                    status.reader.stop();
+                }
+                else if (b.Equals(ButtonReader.PadButton.START))
+                {
+                    mata[9] = true;
+                    status.reader.start();
+                    timer1.Start();
+                    kontrCale.play();
+                    status.kurs.Focus();
+                }
+               
+            }
+        }
+        #endregion
+        #region vCale_KeyDownEvent
+        private void vCale_KeyDownEvent(object sender, AxWMPLib._WMPOCXEvents_KeyDownEvent e)
+        {  
+            //up -W
+            if (e.nKeyCode == 87)
+            {
+                mata[0] = true;
+            }
+            //down - X
+            if (e.nKeyCode == 88)
+            {
+                mata[1] = true;
+            }
+            //right -D
+            if (e.nKeyCode == 68)
+            {
+                mata[2] = true;
+            }
+            //left - A
+            if (e.nKeyCode == 65)
+            {
+                mata[3] = true;
+            }
+            //x - Q
+            if (e.nKeyCode == 81)
+            {
+                mata[4] = true;
+            }
+            //TRAINGLE - Z
+            if (e.nKeyCode == 90)
+            {
+                mata[5] = true;
+            }
+            //SQAURE - C
+            if (e.nKeyCode == 67)
+            {
+                mata[6] = true;
+            }
+            //CIRCLE-E
+            if (e.nKeyCode == 69)
+            {
+                mata[7] = true;
+            }
+            //select - spacja
+            if (e.nKeyCode == 32)
+            {
+                mata[8] = true;
+                pauza();
+                status.pauza.Show();
+                status.reader.stop();
+            }
+            //start - S
+            if (e.nKeyCode == 83)
+            {
+                mata[9] = true;
+                status.reader.start();
+                timer1.Start();
+                kontrCale.play();
+                status.kurs.Focus();
+            }
+        }
+#endregion
     }
 }

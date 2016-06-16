@@ -51,7 +51,7 @@ namespace WindowsFormsApplication1
             status.pomoc = new oPomoc();
             // tutaj chcę wrzucić włączanie Twojej instancji, ale czy na pewno w niej będzie potrzebny argument form? 
             // wważnas
-            //status.reader = new UsbReader();
+            status.reader = new UsbReader();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
