@@ -38,12 +38,16 @@ namespace WindowsFormsApplication1
 
         public static void init_kroki()
         {
-            // dla każdego z poziomów czasy nowego kroku.
-            tKroki[1] = new int[]{6, 11, 18, 25, 31, 39};
+            // dla każdego z poziomów czasy nowego kroku w decysekundach.
+            tKroki[1] = new int[]{60, 110, 180, 250, 310, 390};
+            tKroki[2] = new int[] { 17, 25, 50, 57, 70, 80, 100, 120, 130, 150, 162, 175, 190, 200, 210, 220, 233, 250, 260, 270, 285, 290, 305, 320 };
+
 
             // dla każdego z poziomów sekwencje kroków
             sKroki[1] = new int[] { (int)pMata.RIGHT, (int)pMata.UP, (int)pMata.CIRCLE, (int)pMata.LEFT, (int)pMata.DOWN, (int)pMata.TRIANGLE };
-
+            sKroki[2] = sKroki[1];
+            sKroki[3] = sKroki[1];
+            sKroki[4] = sKroki[1];
         }
 
         // plik użytkownika

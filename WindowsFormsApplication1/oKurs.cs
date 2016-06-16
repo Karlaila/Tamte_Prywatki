@@ -214,10 +214,10 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private int secToTick(int sec)
+        private int dsecToTick(int dsec)
         {
             int ttick = timer1.Interval;
-            return sec * 1000 / ttick;
+            return dsec * 100 / ttick;
         }
         private int iKroki = 0;
         bool zmiana = true;
@@ -229,7 +229,7 @@ namespace WindowsFormsApplication1
             // sprawdzanie tablicy mata - czy są nowe naciśnięcia? 
             // jeśli poprawne wciśnięcia - itKroki++
 
-            int prog = secToTick(tKroki[iKroki]);
+            int prog = dsecToTick(tKroki[iKroki]);
             if (licznik < prog && zmiana)
             {
                 zerujStrzalke();
