@@ -202,7 +202,7 @@ namespace WindowsFormsApplication1
         {
             // sprawdzanie tablicy mata - czy są nowe naciśnięcia? 
             // uzupełnianie tablicy strzałki - co ma być naciśnięte?
-
+            /*
             //TESTY:
             //prymitywny kod(w tym momencie zapali Ci sie krzyzyk i strzalka w prawo)
             timeToStrzalka += timer1.Interval;
@@ -247,7 +247,7 @@ namespace WindowsFormsApplication1
                 strzalkaWcisnieta[4] = true;
                 mata[4] = false;
             }
-
+            */
 
 
         }
@@ -381,6 +381,7 @@ namespace WindowsFormsApplication1
                 status.kurs.Focus();
             }
         }
-#endregion
+        #endregion
+
     }
 }

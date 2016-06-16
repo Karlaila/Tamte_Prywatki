@@ -42,6 +42,10 @@ namespace WindowsFormsApplication1
             wmpPlayer.Ctlcontrols.play();
             cBwybierz.Enabled = false;
             tBnazwa.Enabled = false;
+            //domyślnie
+            status.poziom = 1;
+            status.init_kroki();
+
             status.menu = new oMenu();
             status.wybor = new oWybor();
             status.kurs = new oKurs();
@@ -52,6 +56,7 @@ namespace WindowsFormsApplication1
             // tutaj chcę wrzucić włączanie Twojej instancji, ale czy na pewno w niej będzie potrzebny argument form? 
             // wważnas
             status.reader = new UsbReader();
+
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

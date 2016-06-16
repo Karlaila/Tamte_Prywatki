@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
+
             this.pbL = new System.Windows.Forms.PictureBox();
             this.pbDL = new System.Windows.Forms.PictureBox();
             this.pbD = new System.Windows.Forms.PictureBox();
@@ -48,6 +49,8 @@
             this.pbGL = new System.Windows.Forms.PictureBox();
             this.pbGP = new System.Windows.Forms.PictureBox();
             this.pbG = new System.Windows.Forms.PictureBox();
+
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.vCale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vNogi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbL)).BeginInit();
@@ -230,12 +233,21 @@
             this.pbG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbG.TabIndex = 2;
             this.pbG.TabStop = false;
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(242, 207);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "label3";
             // 
             // oKurs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 326);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.label1);
@@ -293,5 +305,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Label label3;
     }
 }
