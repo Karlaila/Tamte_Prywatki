@@ -142,6 +142,8 @@ namespace WindowsFormsApplication1
                     {
                         pressedButtons += b.ToString() + " ";
                     }
+                    status.kurs.label2t = "blalala";
+                    //status.kurs.setMata(pressed);
                     form.setText(pressedButtons);
                     form.setMata(pressed);
                 }
@@ -151,7 +153,7 @@ namespace WindowsFormsApplication1
             catch (Exception ex)
             {
                 form.setText("\r\n");
-                form.setText((ec != ErrorCode.None ? ec + ":" : String.Empty) + ex.Message);
+                form.label2t = ((ec != ErrorCode.None ? ec + ":" : String.Empty) + ex.Message);
             }
             finally
             {
@@ -438,6 +440,7 @@ namespace WindowsFormsApplication1
                 readerThread = new Thread(new ThreadStart(readPolling));
                 isRunning = true;
                 readerThread.Start();
+                status.kurs.label2t = "jest start thread";
                 while (!readerThread.IsAlive) ;
             }
         }

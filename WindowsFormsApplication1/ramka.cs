@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
         public string lp;
         public string dane;
         private string pPlik;
-        private StreamWriter file;
+        public StreamWriter file;
 
         public ramka()
         {
@@ -25,21 +25,20 @@ namespace WindowsFormsApplication1
             pPlik = status.pDane + status.nUzytk + ".txt";
             try
             {
-                file = new StreamWriter(pPlik);
+                file = new StreamWriter(pPlik, true);
             }
             catch (Exception ex)
             {
                 File.Create(pPlik);
-                file = new StreamWriter(pPlik);
+                file = new StreamWriter(pPlik, true);
             }
         }
 
         //ramka: data poziom podejście czas trwania(s) poprawność(%) średni czas odpowiedzi(ds)
-        public void zapis(int poziom, int nrPodejscia, int czas, int popr, int sczas)
+        public void zapis(int poziom, int nrPodejscia, int czas, double popr, double sczas)
         {
-            dane = data + " " + poziom.ToString() + " " + nrPodejscia.ToString() + czas.ToString() + " " + popr.ToString() + " " + sczas.ToString();
+            dane = data + " " + poziom.ToString() + " " + nrPodejscia.ToString() +" " + czas.ToString() + " " + popr.ToString() + " " + sczas.ToString();
             file.WriteLine(dane);
-            Console.WriteLine("udało się " + pPlik);
         }
 
         // Do zrobienia odczytywanie danej z pliku

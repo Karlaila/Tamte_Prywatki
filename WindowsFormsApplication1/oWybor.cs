@@ -22,7 +22,6 @@ namespace WindowsFormsApplication1
         public void film()
         {
             player.URL = "filmy/wWybor.avi";
-            status.nrPodejscia++;
         }
 
         private void bPowrot_Click(object sender, EventArgs e)

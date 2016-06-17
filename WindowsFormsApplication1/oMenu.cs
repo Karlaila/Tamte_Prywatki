@@ -59,12 +59,14 @@ namespace WindowsFormsApplication1
         private void wyjdz(object sender, EventArgs e)
         {
             status.kurs.Close();
+            status.ramka.file.Close();
             Application.Exit();
             status.menu.Close();
         }
 
         private void wyjdz(object sender, FormClosingEventArgs e)
         {
+            status.ramka.file.Close();
             Application.Exit();
         }
     }

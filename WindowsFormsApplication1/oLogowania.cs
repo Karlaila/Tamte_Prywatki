@@ -111,15 +111,6 @@ namespace WindowsFormsApplication1
             else
             {
                 nazwa = cBwybierz.SelectedItem.ToString();
-                if (File.Exists(status.pDane + nazwa))
-                {
-                    // wczytaj ostatnio ukończony poziom!
-                }
-                else
-                {
-                    // poziom = 0;
-                    File.Create(status.pDane + nazwa);
-                }
                 czyOk = true;
             }
             #endregion

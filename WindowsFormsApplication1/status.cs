@@ -32,7 +32,7 @@ namespace WindowsFormsApplication1
             START = 13
         }
         public static int poziom;
-        public static int nrPodejscia;
+        public static int nrPodejscia = 0;
         public static int[][] tKroki = new int[13][];
         public static int[][] sKroki = new int[13][];
         public static int[] czasyKonca = { 220, 390, 320, 320, 2210, 390, 320, 320, 2210, 390, 320, 320, 2210, 390, 320, 320, 2210 };
@@ -90,5 +90,8 @@ namespace WindowsFormsApplication1
         public static String[] zFilmu2 = { "filmy/wP1start.avi", "filmy/wP1krokipierwsze.avi", "filmy/wP1kroki.avi", "filmy/wP1start.avi", "filmy/wP1muza.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi", "filmy/wP1start.avi" }; // dodać filmy!
         public static String zFilmuStopy = "filmy/wP1Stopy.avi";
         public static UsbReader reader;
+
+
+
     }
 }

@@ -24,6 +24,7 @@ namespace WindowsFormsApplication1
         private int lpoprawne = 0; // liczba poprawnych odpowiedzi
         private int lniepoprawne = 0; // liczba niepoprawnych odpowiedzi
         private int sCzasReakcji = 0; // suma czasów reakcji w decysekundach
+        public string label2t = "bla";
 
         UsbReader reader = null;
         Thread readerThread = null;
@@ -43,6 +44,11 @@ namespace WindowsFormsApplication1
         private void zerujStrzalke(){
             strzalka = new bool[] { false, false, false, false, false, false, false, false, false, false, false, false, false, false };
         }
+
+        private void zerujMate()
+        {
+            mata = new bool[] { false, false, false, false, false, false, false, false, false, false, false, false, false, false };
+        }
         #endregion
 
         public oKurs()
@@ -52,10 +58,11 @@ namespace WindowsFormsApplication1
             vNogi.uiMode = "none";
             vCale.settings.autoStart = false;
             label1.Visible = false;
-            label2.Visible = false;
+            label2.Visible = true;
             label3.Visible = false;
 
         }
+
 
         #region obsługa filmu
         public void film()
@@ -179,7 +186,7 @@ namespace WindowsFormsApplication1
             if (lniepoprawne != 0)
             {
                 //MessageBox.Show("zapisuje");
-                status.ramka.zapis(status.poziom, status.nrPodejscia, tickToDsec(czas) * 10, lpoprawne / lniepoprawne * 100, tickToDsec(sCzasReakcji) / lniepoprawne);
+                status.ramka.zapis(status.poziom, status.nrPodejscia, tickToDsec(czas) / 10, (double)lpoprawne / (double)lniepoprawne * 100.0, (double)tickToDsec(sCzasReakcji) / (double)lniepoprawne);
             }
             lpoprawne = 0;
             lniepoprawne = 0;
@@ -272,7 +279,7 @@ namespace WindowsFormsApplication1
             DialogResult result = MessageBox.Show("Czy na pewno wyjść z aplikacji?", caption, button, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-
+                status.ramka.file.Close();
                 Application.Exit();
             }
             else
@@ -299,6 +306,7 @@ namespace WindowsFormsApplication1
         private void taniec()
         {
             kontrNogi.stop();
+            status.nrPodejscia++;
             startButton.Enabled = true;
             czytaniec = true;
             /*if (status.poziom % 4 != 3)
@@ -378,6 +386,7 @@ namespace WindowsFormsApplication1
             czas++;
             prog = dsecToTick(tKroki[iKroki]);
             isKroki = iKroki % sKroki.Length;
+            label2.Text = label2t;
 
             #region poprawność
             // Czy poprawny?
@@ -387,9 +396,6 @@ namespace WindowsFormsApplication1
                 lpoprawne++;
                 //niepoprawny = false;
                 sCzasReakcji += czas - czaszm;
-                label1.Text = lpoprawne.ToString() + " poprawne";
-                label2.Text = sCzasReakcji.ToString() + " czas reakacji";
-                label3.Text = lniepoprawne.ToString() + " wszystkie";
                 if (lpoprawne >= progl) koniec = true;
 
             }
@@ -404,6 +410,7 @@ namespace WindowsFormsApplication1
             if (koniec && iKroki % 6 == 0)
             {
                 pGratulacje();
+                koniec = false;
             }
 
             #region zmiana kroków - poziomy 2,3,4
@@ -568,6 +575,11 @@ namespace WindowsFormsApplication1
         #region setMata
         public void setMata(List<ButtonReader.PadButton> pressed)
         {
+            //zerujMate();
+            label3.Visible = true;
+            label3.Text = pressed.ToString();
+           // label2.Visible = true;
+            //label2.Text = label2t;
             foreach (ButtonReader.PadButton b in pressed)
             {   //10 przycisków
                 if (b.Equals(ButtonReader.PadButton.UP))
